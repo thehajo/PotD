@@ -211,7 +211,7 @@
 		}, {
           name: 'Wraithwalker',
           desc: ['After using an Activate perk (Blind Guardian, Heavy Weighs the Tapestry, Lamb to the Slaughter, Nemesis, The Reaper Comes), Illusion spells are 50% more powerful and last 50% longer for 10 seconds. The cooldown of Activate perks ends after 8 seconds out of combat.'],
-          req: [20],
+          req: [100],
           pos: [-52, -198],
           deps: [10, 21],
 		}, {
