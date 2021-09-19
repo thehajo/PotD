@@ -412,7 +412,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
           ctx.fillStyle = 'rgba(200,200,200,0.7)';
           ctx.fillText("Requires: " + hoveredPerk.req[Math.max(0, activeLevel - 1)], 345 + w, 743);
         }
-        ctx.font = '12px Arial';
+        ctx.font = '12px Calibri';
         ctx.fillText(hoveredPerk.desc[Math.max(0, activeLevel - 1)], 335, 760);
         if (activeLevel > 0 && activeLevel < maxLevels) {
           t = "Next Rank: " + hoveredPerk.desc[Math.max(0, activeLevel)];

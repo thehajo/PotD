@@ -5,70 +5,163 @@
       name: 'Alchemy',
       cname: 'alchemy',
       perks: [
-        {
-          name: 'Alchemist',
-          levels: 5,
-          desc: ['Potions and poisons you make are 20% stronger.', 'Potions and poisons you make are 40% stronger.', 'Potions and poisons you make are 60% stronger.', 'Potions and poisons you make are 80% stronger.', 'Potions and poisons you make are 100% stronger.'],
-          req: [0, 20, 40, 60, 80],
+		{
+          name: 'Alchemy Mastery',
+		  levels: 2,
+          desc: ['Potions and poisons you make are 20% stronger.', 'Potions and poisons you make are 40% stronger.'],
+          req: [0, 20],
           pos: [0, 0],
-          id: ['000BE127', '000C07CA', '000C07CB', '000C07CC', '000C07CD']
         }, {
           name: 'Physician',
-          desc: ['Potions you mix that restore Health, Magicka or Stamina are 25% more powerful.'],
+          desc: ['You may choose a type of beneficial potion: Health, Magicka or Stamina. Potions you mix that restore or fortify the chosen attribute are 50% stronger.'],
           req: [20],
-          pos: [110, -21],
+          pos: [81, -7],
           deps: [0],
-          id: ['00058215']
-        }, {
-          name: 'Poisoner',
-          desc: ['Poisons you mix are 25% more effective.'],
-          req: [30],
-          pos: [20, -70],
-          deps: [1],
-          id: ['00058217']
-        }, {
-          name: 'Benefactor',
-          desc: ['Potions you mix with beneficial effects have an additional 25% greater magnitude.'],
-          req: [30],
-          pos: [87, -71],
-          deps: [1],
-          id: ['00058216']
-        }, {
-          name: 'Concentrated Poison',
-          desc: ['Poisins applied to weapons last for twice as many hits.'],
+		}, {
+          name: 'Elemental Oil',
+          desc: ['You may choose a power focused on one element. At will, create a pool of oil that lasts 20 seconds. It reacts violently when struck by a projectile or explosion, exploding and dealing damage equal to your Alchemy skill level.'],
+          req: [40],
+          pos: [-13, -63],
+          deps: [0],
+		}, {
+          name: 'The Alchemist\'s Cookbook',
+          desc: ['You may choose a second Elemental Oil power. In addition, you may also choose "Calming Oil", "Frenzy Oil", "Paralysis Oil" or "Hallowed Oil".'],
           req: [60],
-          pos: [24, -110],
+          pos: [-8, -108],
           deps: [2],
-          id: ['00105F2F']
-        }, {
-          name: 'Experimenter',
-          levels: 3,
-          desc: ['Eating an ingredient reveals first two effects.', 'Eating an ingredient reveals first three effects.', 'Eating an ingredient reveals first four effects.'],
-          req: [50, 70, 90],
-          pos: [77, -111],
+		}, {
+          name: 'Walking Disaster',
+          desc: ['In combat, periodically spill a random oil puddle on the ground. Puddles last 60 seconds.'],
+          req: [90],
+          pos: [-11, -151],
           deps: [3],
-          id: ['00058218', '00105F2A', '00105F2B']
-        }, {
-          name: 'Green Thumb',
-          desc: ['Two ingredients are gathered from plants.'],
+		}, {
+          name: 'Advanced Lab',
+          desc: ['You may choose to upgrade one alchemy lab to an Advanced version for 2500 gold. Potions you mix are 25% stronger at an Advanced Lab. Can be "Disassembled" by sneaking, allowing you to upgrade another.'],
+          req: [30],
+          pos: [10, -49],
+          deps: [0],
+		}, {
+          name: 'Lab Skeever',
+          desc: ['For 20 seconds after using any alchemy lab, beneficial potions you drink last 15 times longer and are 25% stronger.'],
+          req: [50],
+          pos: [11, -72],
+          deps: [5],
+		}, {
+          name: 'Double Toil and Trouble',
+          desc: ['You mix twice as many potions at your Advanced Lab.'],
           req: [70],
-          pos: [31, -163],
-          deps: [4],
-          id: ['00105F2E']
-        }, {
-          name: 'Snakeblood',
-          desc: ['50% resistance to all poisons.'],
-          req: [80],
-          pos: [70, -178],
-          deps: [4, 5],
-          id: ['00105F2C']
-        }, {
-          name: 'Purity',
+          pos: [8, -125],
+          deps: [6],
+		}, {
+          name: 'Experimenter',
+          desc: ['Eating an ingredient reveals all effects.'],
+          req: [30],
+          pos: [33, -53],
+          deps: [0],
+		}, {
+          name: 'Green Thumb',
+          desc: ['Twice as many ingredients are gathered from plants.'],
+          req: [60],
+          pos: [36, -108],
+          deps: [8, 6],
+		}, {
+          name: 'Pure Mixture',
           desc: ['All negative effects are removed from created potions, and all positive effects are removed from created poisons.'],
+          req: [70],
+          pos: [36, -129],
+          deps: [9],
+		}, {
+          name: 'Surgeon',
+          desc: ['Find unique stat-boosting ingredients, more food, and more rare ingredients when looting corpses.'],
+          req: [80],
+          pos: [14, -139],
+          deps: [9],
+		}, {
+          name: 'Stimulants',
+          desc: ['Regenerate an extra 2% of your total Magicka and Stamina per second under the effects of a beneficial potion or food.'],
+          req: [40],
+          pos: [52, -32],
+          deps: [0],
+		}, {
+          name: 'Slow Metabolism',
+          desc: ['All potions and food with beneficial effects last twice as long.'],
+          req: [60],
+          pos: [66, -56],
+          deps: [12],
+		}, {
+          name: 'Adrenaline',
+          desc: ['Move 10% faster under the effects of a beneficial potion or food.'],
+          req: [50],
+          pos: [53, -75],
+          deps: [12],
+		}, {
+          name: 'Maenad',
+          desc: ['Magicka and Stamina are increased by 50 points when you are under the effect of a beneficial potion or ingredient, but reduced by 25 points when you are not.'],
+          req: [60],
+          pos: [61, -121],
+          deps: [14],
+		}, {
+          name: 'Witchmaster',
+          desc: ['When you use a beneficial potion or ingredient, 50% chance to receive a powerful side effect, randomly chosen from a range of 40 side effects.'],
+          req: [80],
+          pos: [42, -134],
+          deps: [14],
+		}, {
+          name: 'Chymical Wedding',
+          desc: ['Witchmaster side effects have 50% chance to cause side effects themselves.'],
+          req: [90],
+          pos: [10, -155],
+          deps: [16],
+		}, {
+          name: 'Poisoner',
+          desc: ['Poisons you mix are 1% more powerful per level of Alchemy.'],
+          req: [30],
+          pos: [81, -30],
+          deps: [0],
+		}, {
+          name: 'Troll Blood',
+          desc: ['Health regenerates 50% faster. When your health is below 50%, you have a 20% chance to poison enemies in melee range every time you get hit.'],
+          req: [40],
+          pos: [85, -99],
+          deps: [18],
+		}, {
+          name: 'Bottomless Cup',
+          desc: ['Poisons applied to weapons last for one additional hit per 10 levels of Alchemy.'],
+          req: [40],
+          pos: [72, -79],
+          deps: [18],
+		}, {
+          name: 'Alkahest',
+          desc: ['Your poisons are highly corrosive, enabling you to ignore 40% of the armor rating of an affected target for their duration.'],
+          req: [50],
+          pos: [103, -93],
+          deps: [18],
+		}, {
+          name: 'Gourmet',
+          desc: ['Vendors of rare alchemical ingredients may sell Jarrin Root, used to make deadly poisons.'],
+          req: [90],
+          pos: [97, -137],
+          deps: [21],
+		}, {
+          name: 'Amplify Lethality',
+          desc: ['Grants the "Amplify Lethality" power. Once a day, point at a victim to silently reduce their poison resistance by 250% for 10 seconds.'],
+          req: [80],
+          pos: [68, -140],
+          deps: [21, 20],
+		}, {
+          name: 'World Serpent',
+          desc: ['When you shout, your blood turns poisonous for 15 seconds. The next time you get hit with a weapon, retaliate with a powerful poisonous strike that deals 50 points of poison damage per second for 10 seconds.'],
+          req: [90],
+          pos: [79, -172],
+          deps: [16, 23],
+		}, {
+          name: 'That Which Does Not Kill You...',
+          desc: ['Upon learning this perk, you imbibe a deadly toxin, taking 150 damage per second. If you survive for 60 seconds, you receive 3 perk points and a permanent 25% bonus to all potions and poisons you make.'],
           req: [100],
-          pos: [58, -216],
-          deps: [7],
-          id: ['0005821D']
+          pos: [50, -208],
+          deps: [17, 24],
+		  
         }
       ]
     }, {
@@ -211,7 +304,7 @@
 		}, {
           name: 'Wraithwalker',
           desc: ['After using an Activate perk (Blind Guardian, Heavy Weighs the Tapestry, Lamb to the Slaughter, Nemesis, The Reaper Comes), Illusion spells are 50% more powerful and last 50% longer for 10 seconds. The cooldown of Activate perks ends after 8 seconds out of combat.'],
-          req: [20],
+          req: [100],
           pos: [-52, -198],
           deps: [10, 21],
 		}, {
@@ -425,112 +518,337 @@
       cname: 'conjuration',
       perks: [
         {
-          name: 'Novice Conjuration',
-          desc: ['Cast Novice level Conjuration spells for half magicka.'],
+          name: 'Conjuration Mastery',
+		  levels: 2,
+          desc: ['Cast Conjuration spells for 35% less Magicka, and Conjuration spells last 0.5% longer per level of Conjuration.', 'Cast Conjuration spells for 50% less Magicka, and Conjuration spells last 1% longer per level of Conjuration.'],
+		  req: [0, 20],
           pos: [0, 0],
-          id: ['000F2CA7']
-        }, {
-          name: 'Summoner',
-          levels: 2,
-          desc: ['Can summon atronachs or raise undead twice as far away.', 'Can summon atronachs or raise undead three times as far away.'],
-          req: [30, 70],
-          pos: [-72, -70],
-          deps: [0],
-          id: ['00105F30', '00105F31']
         }, {
           name: 'Conjuration Dual Casting',
-          desc: ['Dual casting a Conjuration spell overcharges the spell, allowing it to last longer.'],
+          desc: ['Dual casting a Conjuration spell empowers it, increasing effectiveness and cost.'],
           req: [20],
-          pos: [-30, -54],
+          pos: [-40, -4],
           deps: [0],
-          id: ['000153CE']
-        }, {
-          name: 'Necromancy',
-          desc: ['Greater duration for reanimated undead.'],
+		}, {
+          name: 'Rift Summoner',
+		  levels: 2,
+          desc: ['Summon range increased by 25 feet.', 'Summon range increased by 50 feet.'],
+          req: [30, 70],
+          pos: [-62, -22],
+          deps: [0],
+		}, {
+          name: 'Signed in Blood',
+          desc: ['When a friendly conjured Daedra within 15 feet is below full Health, it absorbs your lifeforce to heal itself, preventing you from regenerating Health but regenerating 10 points per second (increased by 4% of its maximum Health when out of combat).'],
           req: [40],
-          pos: [-44, -133],
-          deps: [0],
-          id: ['000581DD']
-        }, {
-          name: 'Mystic Binding',
-          desc: ['Bound weapons do more damage.'],
-          req: [20],
-          pos: [9, -55],
-          deps: [0],
-          id: ['000640B3']
-        }, {
-          name: 'Apprentice Conjuration',
-          desc: ['Cast Apprentice level Conjuration spells for half magicka.'],
-          req: [25],
-          pos: [45, -70],
-          deps: [0],
-          id: ['000C44BB']
-        }, {
+          pos: [-98, -31],
+          deps: [2],
+		}, {
           name: 'Atromancy',
-          desc: ['Double duration for conjured Atronachs.'],
+          desc: ['Summoned Daedra and other non-undead minions last three times as long (or five times at night).'],
           req: [40],
-          pos: [-80, -134],
-          deps: [1],
-          id: ['000CB419']
-        }, {
-          name: 'Elemental Potency',
-          desc: ['Conjured Atronachs are 50% more powerful.'],
-          req: [80],
-          pos: [-75, -161],
-          deps: [6],
-          id: ['000CB41A']
-        }, {
-          name: 'Dark Souls',
-          desc: ['Reanimated undead have 100 points more health.'],
+          pos: [-81, -49],
+          deps: [2],
+		}, {
+          name: 'Gatekeeper',
+          desc: ['Activate a friendly summoned daedra, atronach, or familiar to send it back to Oblivion, regaining 50 magicka.'],
+          req: [35],
+          pos: [-58, -45],
+          deps: [2],
+		}, {
+          name: 'Witch\'s Familiar',
+          desc: ['Grants the lesser power "Chose Familiar". Your chosen atronach, daedra, or familiar will have 2x duration, and while active it will boost the power of your spells by 15% and your magicka regeneration rate by 50%. '],
+          req: [50],
+          pos: [-115, -46],
+          deps: [3, 4],
+		}, {
+          name: 'Gift Of The Master',
+          desc: ['Can give 10% of your maximum health, magicka, and/or stamina to a friendly summoned daedra, atronach, or familiar, boosting its stat by 10x the amount sacrificed. The borrowed health, magicka, and/or stamina is returned when it dies. '],
           req: [70],
-          pos: [-45, -162],
-          deps: [3],
-          id: ['000581DE']
-        }, {
-          name: 'Twin Souls',
-          desc: ['You can have two atronachs or reanimated zombies.'],
-          req: [100],
-          pos: [-39, -175],
-          captionOffset: [0, -13],
-          deps: [7, 8],
-          id: ['000D5F1C']
-        }, {
-          name: 'Soul Stealer',
-          desc: ['Bound weapons cast Soul Trap on targets.'],
-          req: [30],
-          pos: [15, -123],
+          pos: [-116, -71],
+          deps: [6],
+		}, {
+          name: 'Pact Magic',
+          desc: ['Destruction spells and effects are 10% more effective for each friendly conjured Daedra within 30 feet.'],
+          req: [50],
+          pos: [-98, -84],
           deps: [4],
-          id: ['000D799E']
-        }, {
-          name: 'Oblivion Binding',
-          desc: ['Bound weapons will banish summoned creatures and turn raised ones.'],
-          req: [50],
-          pos: [14, -143],
-          captionOffset: [0, -13],
+		}, {
+          name: 'Maelstrom',
+          desc: ['While you charge or concentrate on a spell, friendly conjured Daedra within 30 feet gain 30% extra attack damage.'],
+          req: [60],
+          pos: [-115, -101],
+          deps: [8],
+		}, {
+          name: 'Elemental Potency',
+          desc: ['Atronach conjurations now call Potent Atronachs that are higher level and more powerful.'],
+          req: [70],
+          pos: [-88, -109],
+          deps: [4],
+		}, {
+          name: 'Unleash Hell',
+          desc: ['Conjured Daedra within 75 feet gain additional spells on a 30 second cooldown (Flame/Earth Atronach: Elemental Explosion. Frost/Water Atronach: Reduced Armor/Magic Resistance Curse. Storm/Wind Atronach: Magnetic Knockdown. Dremora: Increased Attack Damage and Movement Speed).'],
+          req: [80],
+          pos: [-102, -167],
           deps: [10],
-          id: ['000D799C']
-        }, {
-          name: 'Adept Conjuration',
-          desc: ['Cast Adept level Conjuration spells for half magicka.'],
-          req: [50],
-          pos: [52, -109],
-          deps: [5],
-          id: ['000C44BC']
-        }, {
-          name: 'Expert Conjuration',
-          desc: ['Cast Expert level Conjuration spells for half magicka.'],
-          req: [75],
-          pos: [45, -141],
-          deps: [12],
-          id: ['000C44BD']
-        }, {
-          name: 'Master Conjuration',
-          desc: ['Cast Master level Conjuration spells for half magicka.'],
-          req: [100],
-          pos: [19, -175],
-          captionOffset: [0, -13],
+		}, {
+          name: 'Summon Resist',
+          desc: ['Friendly conjured Daedra and other non-undead minions within 75 feet gain 50% magic resistance and 300 points of armor.'],
+          req: [90],
+          pos: [-84, -148],
+          deps: [10],
+		}, {
+          name: 'Ravenous Dead',
+          desc: ['Reanimated minions receive a brief burst of strength, dealing 200% extra attack damage for 15 seconds after being reanimated. The level cap of reanimation spells and effects is increased by 1% per level of Conjuration.'],
+          req: [30],
+          pos: [-38, -35],
+          deps: [0],
+		}, {
+          name: 'The Relentless',
+          desc: ['Reanimated undead deal 25% more damage in combat and move and attack 15% faster.'],
+          req: [60],
+          pos: [-29, -53],
           deps: [13],
-          id: ['000C44BE']
+		}, {
+          name: 'Edge of Oblivion',
+          desc: ['You can summon or reanimate 1 additional minion and they last 50% longer. When you do not command a summon or reanimated minion, you lose 250 points of armor and 50% magic resistance.'],
+          req: [50],
+          pos: [-69, -73],
+          deps: [4, 13],
+		}, {
+          name: 'Preservation',
+          desc: ['Summoned and reanimated undead last three times as long (or twenty times if you place Hagraven Feathers into their inventory or use the Dread Zombie or Dead Thrall spells). Reanimated undead also gain 500 armor for 60 seconds after being reanimated.'],
+          req: [40],
+          pos: [-46, -67],
+          deps: [13],
+		}, {
+          name: 'Undead Crown',
+          desc: ['Restores 10 points of Health and Magicka per second to summoned or reanimated undead within 15 feet.'],
+          req: [50],
+          pos: [-36, -87],
+          deps: [16],
+		}, {
+          name: 'Grand Conjurer',
+		  levels: 2,
+          desc: ['Can reanimate, banish or command targets up to 15 levels higher. Banish spells deal 60 bonus damage per second to targets that resist.', 'Can reanimate, banish or command targets of any level. Banish spells deal 1000 bonus damage per second to targets that resist.'],
+          req: [60, 90],
+          pos: [-73, -124],
+          deps: [4, 16],
+		}, {
+          name: 'Soul Reaper',
+          desc: ['You can fill two soul gems with the same soul as long as the soul is the appropriate size.'],
+          req: [100],
+          pos: [-63, -152],
+          deps: [18],
+		}, {
+          name: 'A Plague Upon Thee',
+          desc: ['If a reanimated undead is destroyed within 20 seconds, the attacker is stricken with a Daedric disease that deals 40 damage per second for 20 seconds. Those who have this perk are immune.'],
+          req: [60],
+          pos: [-50, -100],
+          deps: [16],
+		}, {
+          name: 'Corpse Gas',
+          desc: ['If your reanimated undead is destroyed while on fire within 30 seconds, it explodes, dealing up to 300 points of fire damage to targets without this perk. You deal five times as much fire damage to your reanimated undead.'],
+          req: [70],
+          pos: [-35, -115],
+          deps: [20],
+		}, {
+          name: 'Blood Zombie',
+          desc: ['Summoned and raised undead absorb 10 points of Health per second from opponents in melee range.'],
+          req: [70],
+          pos: [-59, -119],
+          deps: [20],
+		}, {
+          name: 'Thrall Lord',
+          desc: ['Undead raised with Dead Thrall get bonus Health, Magicka and Stamina based on their level.'],
+          req: [90],
+          pos: [-52, -138],
+          deps: [22],
+		}, {
+          name: 'Shocked to Life',
+          desc: ['If your reanimated minion is struck by a shock spell within 30 seconds after reanimation completes, it attacks 250% faster and moves 50% faster for 10 seconds. You deal no damage to your reanimated minions with shock spells.'],
+          req: [90],
+          pos: [-32, -151],
+          deps: [23],
+		}, {
+          name: 'March of Oblivion',
+          desc: ['You can summon or reanimate 1 additional minion per 250 points of base Magicka, up to 3 additional minions.'],
+          req: [100],
+          pos: [-49, -175],
+          deps: [12, 23],
+		}, {
+          name: 'Bone Collector',
+          desc: ['Find 11 types of bones on humanoid corpses. 4 Bone Altars are marked on the map. At a Bone Altar, convert 1 of each bone into a Skeleton Warrior. Skeletons do not count against your summon limit. Enemies can only temporarily defeat them, not destroy them.'],
+          req: [20],
+          pos: [-16, -28],
+          deps: [0],
+		}, {
+          name: 'Dead Tide',
+		  levels: 2,
+          desc: ['Maximum number of Skeletons increased by 1 for each 75 points of base Magicka.', 'Maximum number of Skeletons increased by 1 for each 50 points of base Magicka.'],
+          req: [30, 60],
+          pos: [-9, -46],
+          deps: [26],
+		}, {
+          name: 'Reap and Sow',
+		  levels: 2,
+          desc: ['You loot 60% more bones from corpses and recover 50% more bones when you destroy a created Skeleton. Created Skeletons last 75% longer.', 'You loot 100% more bones from corpses and recover all bones when you destroy a created Skeleton. Created Skeletons last 200% longer.'],
+          req: [40, 70],
+          pos: [-22, -71],
+          deps: [27],
+		}, {
+          name: 'Barrow Lord',
+          desc: ['You may give commands to all Skeletons within 150 feet at once, instead of one at a time. Skeletons take 25% less damage from attacks. Grants the "Make Way for Your Lord!" power.'],
+          req: [40],
+          pos: [9, -79],
+          deps: [27],
+		}, {
+          name: 'Skeleton Mages',
+		  levels: 2,
+          desc: ['Able to create Skeleton Mages (Fire, Earth, Frost, Water, Shock, Wind) at a Bone Altar.', 'Able to create Skeleton Mages (Fire, Earth, Frost, Water, Shock, Wind, Poison, Drain Armor, Stagger) at a Bone Altar. You may choose their element at the time of creation.'],
+          req:[50, 80],
+          pos: [-11, -103],
+          deps: [28, 29],
+		}, {
+          name: 'Fire Ritual',
+          desc: ['Able to ritually burn 1 of each bone at a Bone Altar, strengthening all Skeletons within 150 feet. Lasts until the Skeleton is destroyed and increases weapon damage by 15%, spell damage by 30% and Health by 50 points. This effect stacks.'],
+          req: [60],
+          pos: [-21, -136],
+          deps: [30],
+		}, {
+          name: 'King of Bones',
+          desc: ['Assume Control of a Skeleton while becoming invulnerable. The Skeleton does quadruple damage and takes half damage. Unless commanded to remain passive, it automatically attacks foes in range. Lasts up to 45 seconds.'],
+          req: [100],
+          pos: [-13, -172],
+          deps: [31],
+		}, {
+          name: 'Conjure Altar',
+          desc: ['Grants the "Conjure Altar" power. At will, summons a Bone Altar for 60 seconds.'],
+          req: [60],
+          pos: [15, -135],
+          deps: [30],
+		}, {
+          name: 'Puppet Master',
+          desc: ['Your created Skeletons take 25% less damage when you are blocking, deal 25% more attack damage when you are attacking, and their spells are 25% more powerful when you are casting a spell.'],
+          req: [90],
+          pos: [10, -164],
+          deps: [33],
+		}, {
+          name: 'Acolyte',
+          desc: ['Bones can be harvested from humanoid corpses; the dead can be reanimated 3 times before turning to ash. (Harvested corpses cannot be reanimated)'],
+          req: [20],
+          pos: [5, -31],
+          deps: [0],
+		}, {
+          name: 'Bonecraft',
+		  levels: 2,
+          desc: ['Grants the spell "Assemble Skeleton", which allows you to create skeletal minions from harvested bones and filled soul gems.', 'More powerful skeletons and skeletal horses can be created from harvested bones and filled soul gems.'],
+          req: [25, 45],
+          pos: [19, -57],
+          deps: [35],
+		}, {
+          name: 'Ossuary',
+          desc: ['Harvesting bones from a corpse results in more usable bones. Deconstructing a skeleton returns more bones, with a chance to return a filled soul gem.'],
+          req: [40],
+          pos: [-2, -75],
+          deps: [36],
+		}, {
+          name: 'Ancient Tongues',
+          desc: ['Created skeletons can be given simple commands and called to your location.'],
+          req: [50],
+          pos: [48, -93],
+          deps: [36],
+		}, {
+          name: 'Crypt Lore',
+		  levels: 2,
+          desc: ['Created skeletons can be given Fire Salts, Frost Salts, or Void Salts. Doing so increases their magicka pool by 100 and grants them access to a powerful spell of that type. (Bone Horses change appearance and gain elemental cloaks and resistance; Bone Dragons gain elemental shouts)', 'Created skeletons can be given Fire Salts, Frost Salts, or Void Salts for a second time. Doing so increases their magicka pool by a further 100 and grants them access to a devastating spell of that type. (Increases the Bone Horse\'s elemental resist and Bone Dragon\'s elemental shout).'],
+          req: [55, 70],
+          pos: [28, -108],
+          deps: [38],
+		}, {
+          name: 'Chosen Disciple',
+          desc: ['Can gift a created skeleton with your mark of power, boosting their health by 300. You can only have 1 disciple at a time; making another skeleton your disciple will remove the mark of power from your previous disciple. '],
+          req: [70],
+          pos: [29, -130],
+          deps: [38],
+		}, {
+          name: 'Lord of Bones',
+          desc: ['You can now have up to 5 skeletons. Powerful Bone Dragons can be created from collected bones that will guard the location where they are summoned. '],
+          req: [90],
+          pos: [9, -98],
+          deps: [40],
+		}, {
+          name: 'Mystic Binding',
+          desc: ['Bound Weapon spells now summon Mystic Weapons which deal more damage.'],
+          req: [20],
+          pos: [23, -25],
+          deps: [0],
+		}, {
+          name: 'Soul Raider',
+          desc: ['Bound weapons cast Soul Trap on targets for 5 seconds. After trapping 250 souls, all bound weapon perks last twice as long.'],
+          req: [30],
+          pos: [34, -41],
+          deps: [42],
+		}, {
+          name: 'Rend From This World',
+          desc: ['Bound weapons banish conjured Daedra, turn reanimated undead and deal 100 extra damage to non-conjured Daedra.'],
+          req: [40],
+          pos: [50, -64],
+          deps: [43],
+		}, {
+          name: 'Void Burn',
+          desc: ['Bound weapons brand victims with unholy energy for 5 seconds, halting Magicka and Stamina regeneration while draining 15 points per second. When both are depleted, the energy starts devouring their flesh, dealing 15 points of magic damage per second.'],
+          req: [50],
+          pos: [58, -73],
+          deps: [44],
+		}, {
+          name: 'Ghost Dance',
+		  levels: 2,
+          desc: ['While you have a bound weapon equipped, you have a 30% chance to turn ethereal for 2 seconds while an opponent is power attacking.', 'While you have a bound weapon equipped, you have a 60% chance to turn ethereal for 3 seconds while an opponent is power attacking.'],
+          req: [60, 80],
+          pos: [72, -98],
+          deps: [45],
+		}, {
+          name: 'Hollow Binding',
+          desc: ['Bound weapons cut through flesh and spirit, reducing magic resistance by 30% for 5 seconds.'],
+          req: [60],
+          pos: [57, -112],
+          deps: [45],
+		}, {
+          name: 'Covenant of Coldharbour',
+          desc: ['Hollow Binding reduces magic resistance by an additional 30% if you control a summoned Daedra or other non-undead minion.'],
+          req: [90],
+          pos: [70, -157],
+          deps: [47],
+		}, {
+          name: 'Dark Whispers',
+          desc: ['Bound weapons induce a battle rage in their wielder, granting 20% extra attack damage and 100 points of armor rating for 5 seconds when a target is struck.'],
+          req: [70],
+          pos: [42, -137],
+          deps: [47],
+		}, {
+          name: 'Arcane Strike',
+          desc: ['Power attacks with bound weapons send out a wave of arcane energy that damages nearby foes and causes them to stagger.'],
+          req: [80],
+          pos: [46, -161],
+          deps: [49],
+		}, {
+          name: 'Brand of the Necromancer',
+          desc: ['Brand a corpse by striking it with a bound weapon or by delivering the killing blow with a bound weapon attack. The brand grants 25% attack damage and 100 points of Health when reanimated or resurrected. Undead and automatons cannot be branded.'],
+          req: [80],
+          pos: [22, -152],
+          deps: [49],
+		}, {
+          name: 'Feed the Monster',
+          desc: ['Able to feed Human Flesh to summoned or reanimated creatures, healing them and increasing Health, Magicka and Stamina by 200 points for 600 seconds. This effect stacks.'],
+          req: [80],
+          pos: [59, -31],
+          deps: [0],
+		}, {
+          name: 'Rat King',
+          desc: ['When entering combat, creates 3 undead Skeevers under your control. Their corpses can be raised, but they dissipate when combat ends. Use the "Merciful King" power to temporarily prevent this ability from activating.'],
+          req: [40],
+          pos: [58, -11],
+          deps: [0],	
         }
       ]
     }, {
