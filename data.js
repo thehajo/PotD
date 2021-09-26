@@ -2471,68 +2471,212 @@
       cname: 'speechcraft',
       perks: [
         {
-          name: 'Haggling',
-          levels: 5,
-          desc: ['Buying and selling prices are 10% better.', 'Buying and selling prices are 15% better.', 'Buying and selling prices are 20% better.', 'Buying and selling prices are 25% better.', 'Buying and selling prices are 30% better.'],
-          req: [0, 20, 40, 60, 80],
+          name: 'Speech Mastery',
+          levels: 2,
+          desc: ['Sell items for 10% more. Your intimidation attempts are twice as likely to succeed.', 'Sell items for 20% more. Your intimidation attempts are four times as likely to succeed.'],
+          req: [0, 20],
           pos: [0, 0],
-          id: ['000BE128', '000C07CE', '000C07CF', '000C07D0', '000C07D1']
         }, {
-          name: 'Allure',
-          desc: ['10% better prices with the opposite sex.'],
+          name: 'Kinship',
+          desc: ['Buy items for 15% less when trading with the same race.'],
           req: [30],
-          pos: [14, -55],
+          pos: [-32, -39],
           deps: [0],
-          id: ['00058F75']
-        }, {
-          name: 'Bribery',
-          desc: ['Can bribe guards to ignore crimes.'],
+		}, {
+          name: 'Business Relation',
+          desc: ['Create a permanent bond with the next merchant you speak with. Buy items for 30% less from that specific merchant.'],
+          req: [40],
+          pos: [-76, -69],
+          deps: [1],
+		}, {
+          name: 'Hustler',
+          desc: ['Selling prices are 25% better.'],
           req: [30],
-          pos: [60, -56],
-          deps: [0],
-          id: ['00058F72']
-        }, {
-          name: 'Persuasion',
-          desc: ['Persuasion attempts are 30% easier.'],
-          req: [50],
-          pos: [83, -111],
-          deps: [2],
-          id: ['001090A2']
-        }, {
-          name: 'Intimidation',
-          desc: ['Intimidation is twice as successful.'],
-          req: [70],
-          pos: [95, -143],
-          deps: [3],
-          id: ['00105F29']
-        }, {
-          name: 'Merchant',
+          pos: [-59, -79],
+          deps: [1],
+		}, {
+          name: 'Salesman',
           desc: ['Can sell any type of item to any kind of merchant.'],
           req: [50],
-          pos: [5, -111],
+          pos: [-39, -70],
           deps: [1],
-          id: ['00058F7A']
-        }, {
+		}, {
+          name: 'Foreign Markets',
+          desc: ['Buying and selling prices are 25% better at Khajiit caravans.'],
+          req: [60],
+          pos: [-30, -95],
+          deps: [4],
+		}, {
           name: 'Investor',
-          desc: ['Can invest 500 gold with a shopkeeper to increase his available gold permanently.'],
+          desc: ['Can invest with shopkeepers to increase their inventory and available gold.'],
           req: [70],
-          pos: [-4, -142],
-          deps: [5],
-          id: ['00058F7B']
-        }, {
-          name: 'Fence',
-          desc: ['Can barter stolen goods with any merchant you have invested in.'],
-          req: [90],
-          pos: [-12, -169],
+          pos: [-58, -111],
+          deps: [2, 4],
+		}, {
+          name: 'Private Stock',
+          desc: ['Shopkeepers you have invested in sell additional enchanted weapons, armor pieces, jewelry, spell tomes and alchemy ingredients.'],
+          req: [80],
+          pos: [-68, -139],
           deps: [6],
-          id: ['00058F79']
-        }, {
+		}, {
+          name: 'Fence',
+          desc: ['Can barter stolen goods with any merchant.'],
+          req: [70],
+          pos: [-33, -147],
+          deps: [6],
+		}, {
           name: 'Master Trader',
-          desc: ['Every merchant in the world gains 1000 gold for bartering.'],
+          desc: ['Every merchant in the world gains additional gold for bartering.'],
           req: [100],
-          pos: [56, -177],
-          deps: [7],
-          id: ['001090A5']
+          pos: [-51, -188],
+          deps: [8],
+		}, {
+          name: 'Performer',
+          desc: ['Grants the "Perform" power. Once a day, play a song to entertain up to five people within 50 feet and collect a donation from each, based on your Speech skill and the amount of gold they are carrying.'],
+          req: [20],
+          pos: [-1, -30],
+          deps: [0],
+		}, {
+          name: 'Serenade',
+          desc: ['Performing to members of the opposite sex yields twice as much gold and potentially small items.'],
+          req: [30],
+          pos: [-15, -57],
+          deps: [10],
+		}, {
+          name: 'Irresistible Dance',
+          desc: ['Can Perform in combat to force the two nearest enemy people within 100 feet to dance spellbound, preventing them from acting and reducing their armor skills by 50 levels. Use again to stop.'],
+          req: [30],
+          pos: [9, -75],
+          deps: [10],
+		}, {
+          name: 'Lord of the Dance',
+          desc: ['Irresistible Dance can affect up to five enemies.'],
+          req: [90],
+          pos: [48, -163],
+          deps: [12],
+		}, {
+          name: 'Golden Fiddle',
+          desc: ['Irresistible Dance now also forces daedra, undead and animals to listen spellbound.'],
+          req: [40],
+          pos: [8, -109],
+          deps: [12],
+		}, {
+          name: 'Encore',
+          desc: ['Able to Perform multiple times per day.'],
+          req: [50],
+          pos: [-26, -121],
+          deps: [12],
+		}, {
+          name: 'Earthquake Drum',
+          desc: ['Can Perform in combat to unleash shockwaves. Each drumbeat deals 50 points of damage to nearby enemies within 30 feet. Use again to stop.'],
+          req: [60],
+          pos: [0, -129],
+          deps: [14, 15],
+		}, {
+          name: 'Witching Rhythm',
+          desc: ['Earthquake Drum deals 50% more damage. Each beat of Earthquake Drum also briefly reduces the magic resistance of affected enemies by 200% for 0.4 seconds.'],
+          req: [80],
+          pos: [8, -151],
+          deps: [16],
+		}, {
+          name: 'War Drummer',
+          desc: ['Each beat of Earthquake Drum also heals nearby allies by up to 20 points based on their missing Health percentage, and grants them 100% extra attack damage for 0.4 seconds.'],
+          req: [90],
+          pos: [-5, -180],
+          deps: [17],
+		}, {
+          name: 'Speak With Animals',
+          desc: ['Can Activate animals to tame them, forcing them to follow you anywhere you go and fight for you until released. You can only have one Wild Companion at a time. Use the "Release Companion" power to release your Wild Companion.'],
+          req: [50],
+          pos: [40, -69],
+          deps: [0],
+		}, {
+          name: 'Horn of Sovngarde',
+		  levels: 2,
+          desc: ['Grants the "Horn of Sovngarde" power. Once a day, blow a horn to call the nearest three friendly people (except followers) within 200 feet to follow you for 600 seconds.', 'Grants the "Horn of Sovngarde" power. Once a day, blow a horn to call the nearest three friendly people (except followers) within 200 feet to follow you for one ingame day.'],
+          req: [70, 100],
+          pos: [80, -122],
+          deps: [19],
+		}, {
+          name: 'Gift of Kynareth',
+          desc: ['Improves your Wild Companion. Wolves gain 100% extra attack damage. Spiders gain magic immunity. Bears gain 150 points of Health. Chaurus gain 300 points of armor. Saber cats gain 40% movement speed and move silently.'],
+          req: [80],
+          pos: [57, -136],
+          deps: [19],
+		}, {
+          name: 'Beastmaster',
+          desc: ['Tamed animals get 50% increased attack damage, 150 points of Health, and move 25% faster.'],
+          req: [95],
+          pos: [87, -167],
+          deps: [21],
+		}, {
+          name: 'And the Universe Listens',
+          desc: ['Shouting restores points of Health, Magicka and Stamina equal to your shout cooldown in seconds. You gain Speech experience when shouting based on your shout cooldown.'],
+          req: [20],
+          pos: [41, -24],
+          deps: [0],
+		}, {
+          name: 'Breath and Form',
+          desc: ['Sprinting consumes very little stamina, and power attacks cost 10% less stamina.'],
+          req: [30],
+          pos: [35, -45],
+          deps: [23],
+		}, {
+          name: 'Windborne',
+          desc: ['Shouting summons up a divine wind, granting 30% extra attack damage and 15% increased movement speed for 15 seconds. This effect stacks.'],
+          req: [40],
+          pos: [68, -62],
+          deps: [23],
+		}, {
+          name: 'Hurricane Force',
+          desc: ['Shouts that affect others are 1% more powerful per level of Speech.'],
+          req: [60],
+          pos: [82, -102],
+          deps: [25],
+		}, {
+          name: 'Force Redoubled',
+		  levels: 2,
+          desc: ['25% chance to reduce the cooldown of any shout to 3 seconds.', '50% chance to reduce the cooldown of any shout to 3 seconds.'],
+          req: [50, 80],
+          pos: [102, -75],
+          deps: [25],
+		}, {
+          name: 'Thu\'um of War',
+          desc: ['Your shouts stagger nearby enemies within 25 feet, reducing armor rating by 300 points for 10 seconds and knocking enemies below 25% Health to the ground.'],
+          req: [70],
+          pos: [123, -115],
+          deps: [27],
+		}, {
+          name: 'Skald',
+          desc: ['Power attacks reduce the remaining duration of your shout cooldown by 5 seconds.'],
+          req: [60],
+          pos: [129, -76],
+          deps: [27],
+		}, {
+          name: 'Voice of the First World',
+          desc: ['You gain 50 magicka, and your shouts prevent nearby enemies from shouting for a short time.'],
+          req: [80],
+          pos: [140, -143],
+          deps: [26, 29],
+		}, {
+          name: 'Merciless Storm',
+          desc: ['Grants the "Merciless Storm" power. Once a day, cancels an active shout cooldown, allowing you to shout again immediately afterwards.'],
+          req: [80],
+          pos: [101, -141],
+          deps: [27],
+		}, {
+          name: 'Dovahzulaan',
+          desc: ['For 120 seconds after using Merciless Storm, any shout you use also carries the previous shout.'],
+          req: [100],
+          pos: [124, -178],
+          deps: [31],
+		}, {
+          name: 'Sly',
+          desc: ['Can bribe guards to ignore crimes and persuasion attempts are 30% easier.'],
+          req: [30],
+          pos: [63, -14],
+          deps: [0],
+		
         }
       ]
     }
