@@ -1697,70 +1697,217 @@
       cname: 'enchanting',
       perks: [
         {
-          name: 'Enchanter',
-          levels: 5,
-          desc: ['New enchantments are 20% stronger.', 'New enchantments are 40% stronger.', 'New enchantments are 60% stronger.', 'New enchantments are 80% stronger.', 'New enchantments are 100% stronger.'],
-          req: [0, 20, 40, 60, 80],
+          name: 'Enchanting Mastery',
+          levels: 2,
+          desc: ['New enchantments are 20% stronger. Soul gems provide 2 extra weapon charge points per level of Enchanting.', 'New enchantments are 40% stronger. Soul gems provide 4 extra weapon charge points per level of Enchanting.'],
+          req: [0, 20],
           pos: [0, 0],
-          id: ['000BEE97', '000C367C', '000C367D', '000C367E', '000C367F']
         }, {
-          name: 'Fire Enchanter',
-          desc: ['Fire enchantments on weapons and armor are 25% stronger.'],
+          name: 'Last Word',
+		  levels: 3,
+          desc: ['Scrolls are 2% more powerful or last 4% longer per level of Enchanting.', 'Scrolls are 4% more powerful or last 8% longer per level of Enchanting.', 'Scrolls are 6% more powerful or last 12% longer per level of Enchanting.'],
+          req: [20, 50, 80],
+          pos: [-38, -16],
+          deps: [0],
+		}, {
+          name: 'Staff Channeler',
+          desc: ['When a staff is equipped, all weapon enchantments drain 25% less charge and you gain a small amount of Enchanting experience in combat.'],
           req: [30],
-          pos: [-24, -69],
+          pos: [-20, -22],
           deps: [0],
-          id: ['00058F80']
-        }, {
-          name: 'Insightful Enchanter',
-          desc: ['Skill enchantments on armor are 25% stronger.'],
-          req: [50],
-          pos: [22, -69],
-          deps: [0],
-          id: ['00058F7E']
-        }, {
-          name: 'Soul Squeezer',
-          desc: ['Soul gems provide extra magicka for recharging.'],
-          req: [20],
-          pos: [75, -69],
-          deps: [0],
-          id: ['00058F7C']
-        }, {
-          name: 'Soul Siphon',
-          desc: ["Death blows to creatures, but not people, trap 5% of the victim's soul, recharging the weapon."],
-          req: [40],
-          pos: [64, -141],
-          captionOffset: [0, -13],
-          deps: [3],
-          id: ['00108A44']
-        }, {
-          name: 'Frost Enchanter',
-          desc: ['Frost enchantments on weapons and armor are 25% stronger.'],
-          req: [40],
-          pos: [-18, -108],
-          deps: [1],
-          id: ['00058F81']
-        }, {
-          name: 'Storm Enchanter',
-          desc: ['Shock enchantments on weapons and armor are 25% stronger.'],
-          req: [50],
-          pos: [-1, -139],
-          deps: [5],
-          id: ['00058F82']
-        }, {
-          name: 'Corpus Enchanter',
-          desc: ['Health, magicka, and stamina enchantments on armor are 25% stronger.'],
-          req: [70],
-          pos: [43, -108],
+		}, {
+          name: 'Power Stone',
+		  levels: 3,
+          desc: ['Staves are 25% stronger, and an equipped staff improves other weapon enchantments by 25%.', 'Staves are 50% stronger, and an equipped staff improves other weapon enchantments by 50%.', 'Staves are 100% stronger, and an equipped staff improves other weapon enchantments by 100%.'],
+          req: [40, 60, 80],
+          pos: [9, -41],
           deps: [2],
-          id: ['00058F7D']
-        }, {
-          name: 'Extra Effect',
-          desc: ['Can put two enchantments on the same item.'],
+		}, {
+          name: 'Mana Shield',
+          desc: ['Take 25% less damage from attacks if you have a staff equipped and no shield.'],
+          req: [70],
+          pos: [7, -60],
+          deps: [3],
+		}, {
+          name: 'Secretkeeper',
+          desc: ['When a staff is equipped in your left hand, your attacks deal 25% more damage and critical damage. When a staff is equipped in your right hand, your spells and scrolls are 25% more effective.'],
+          req: [40],
+          pos: [-45, -53],
+          deps: [1, 2],
+		}, {
+          name: 'Scroll Hunter',
+          desc: ['10% chance to find a random scroll on the corpses of people you kill.'],
+          req: [50],
+          pos: [-73, -56],
+          deps: [5],
+		}, {
+          name: 'Spider Hunter',
+          desc: ['5% chance to find a random imbued spider on the corpses of people you kill.'],
+          req: [90],
+          pos: [-87, -93],
+          deps: [6],
+		}, {
+          name: 'Flame of Magnus',
+          desc: ['While casting or concentrating on a staff or spell in your left hand, you may attack with your right hand, dealing 50% more damage and critical damage.'],
+          req: [50],
+          pos: [-65, -82],
+          deps: [5],
+		}, {
+          name: 'Staff Recharge',
+          desc: ['Equipped staves regenerate 5 points of charge per second, up to their charge level when you last equipped them or recharged them with a soul gem.'],
+          req: [60],
+          pos: [-20, -93],
+          deps: [5],
+		}, {
+          name: 'Charge Tap',
+          desc: ['Grants the "Charge Tap" power. At will, drains a quarter of your current weapon charge to restore Health by 15% of the amount drained and Magicka and Stamina by 25% of the amount drained. (If you have two enchanted weapons equipped, the drain is split.)'],
+          req: [70],
+          pos: [-27, -126],
+          deps: [9],
+		}, {
+          name: 'You Shall Not Pass',
+          desc: ['Simultaneously (within 1 second) using an enchanted staff in your left hand and striking with an enchanted weapon in your right hand releases a flash of light that staggers enemies and deals damage equal to half your Enchanting skill level.'],
+          req: [90],
+          pos: [-55, -156],
+          deps: [8, 10],
+		}, {
+          name: 'Resonance',
+          desc: ['Elemental enchantments on armor are 30% more effective if you have an elemental spell of the same type equipped. '],
+          req: [45],
+          pos: [0, -27],
+          deps: [0],
+		}, {
+          name: 'Exemplar',
+          desc: ['Skill enchantments on armor increase your corresponding skill level by 30 if your health falls below 25%.'],
+          req: [60],
+          pos: [-10, -52],
+          deps: [12],
+		}, {
+          name: 'Overflow',
+          desc: ['Health, magicka, and stamina enchantments on armor restore 1-3% of your maximum health, magicka, or stamina every second during combat. Does not stack.'],
+          req: [70],
+          pos: [0, -71],
+          deps: [13],
+		}, {
+          name: 'Gem Dust',
+          desc: ['You may choose to destroy a Flawless Gem when you begin the enchanting process and sprinkle its dust on the Arcane Enchanter to Empower it. New enchantments are 25% stronger when placed upon an item of the type corresponding to the gem.'],
+          req: [40],
+          pos: [30, -46],
+          deps: [0],
+		}, {
+          name: 'Preserver',
+          desc: ['Learning an item\'s enchantment does not destroy it.'],
+          req: [50],
+          pos: [17, -90],
+          deps: [15],
+		}, {
+          name: 'Regalia',
+          desc: ['New enchantments placed upon robes, circlets, hoods and necklaces are 30% stronger.'],
+          req: [60],
+          pos: [41, -78],
+          deps: [15],
+		}, {
+          name: 'Attunement',
+          desc: ['All enchantments on equipped weapons and armor are 10% more powerful and last 10% longer.'],
+          req: [70],
+          pos: [13, -117],
+          deps: [9, 17],
+		}, {
+          name: 'Heart of the Sun',
+          desc: ['Use an equipped staff as an energy source, causing it to lose charge at a rate of 15 points per second but making your weapon enchantments 1% more effective per 50 points of charge remaining in the staff. (This effect stacks if more than one staff is equipped.) Sheathe to cancel.'],
+          req: [80],
+          pos: [-6, -153],
+          deps: [10, 18],
+		}, {
+          name: 'Twin Enchantment',
+          desc: ['Can place two enchantments upon the same item.'],
+          req: [80],
+          pos: [43, -121],
+          deps: [17],
+		}, {
+          name: 'Arcane Nexus',
+          desc: ['Further Empower enchantments by upgrading one arcane enchanter to an Arcane Nexus for 2500 gold. New enchantments created at an Arcane Nexus are 25% stronger. Can be "Disassembled" by sneaking, allowing you to upgrade another.'],
+          req: [90],
+          pos: [48, -150],
+          deps: [20],
+		}, {
+          name: 'Draconic Infusion',
+          desc: ['Dragon souls can be sacrificed at an Arcane Enchanter to enchant weapons and armor with Dragon\'s Wrath or Dragon\'s Immortality, respectively. Each item you wish to enchant requires spending a dragon soul.'],
           req: [100],
-          pos: [37, -166],
-          captionOffset: [0, -13],
-          deps: [6, 7],
-          id: ['00058F7F']
+          pos: [15, -171],
+          deps: [21],
+		}, {
+          name: 'Miracle',
+          desc: ['You put your heart and soul into the next item you enchant at an Arcane Nexus, placing up to three enchantments upon it that are 25% stronger. Try as you might, you will never be able to repeat this feat.'],
+          req: [100],
+          pos: [40, -183],
+          deps: [21],
+		}, {
+          name: 'Artificer',
+          desc: ['Artifacts consume no charge, and all other weapons consume 50% less charge. You can learn the spells of unique staves by using them.'],
+          req: [45],
+          pos: [39, -32],
+          deps: [0],
+		}, {
+          name: 'Reliquary of Myth',
+          desc: ['Weapon enchantments deal 20% more damage. You can craft unique items and modify artifacts at an enchanter.'],
+          req: [70],
+          pos: [46, -56],
+          deps: [24],
+		}, {
+          name: 'Soul Enchanter',
+          desc: ['New enchantments placed on weapons have 1000 extra charge.'],
+          req: [60],
+          pos: [72, -35],
+          deps: [24],
+		}, {
+          name: 'Soul Siphon',
+          desc: ['Death blows with enchanted weapons to creatures, but not people, trap 5% of the victim\'s soul, recharging the weapon. Does not apply to staves.'],
+          req: [20],
+          pos: [47, -14],
+          deps: [0],
+		}, {
+          name: 'Empowered Binding',
+          desc: ['Souls you trap are one size larger than normal.'],
+          req: [80],
+          pos: [70, -10],
+          deps: [27],
+		}, {
+          name: 'Tethered Anima',
+          desc: ['Soul gems have a 50% chance to remain after use. Soul gems that remain have a 50% chance to retain the soul being used.'],
+          req: [90],
+          pos: [88, -23],
+          deps: [26, 28],
+		}, {
+          name: 'Thunderstruck',
+          desc: ['Weapon enchantments are 25% more effective when delivered by a power attack (or 50% for a two-handed power attack).'],
+          req: [30],
+          pos: [61, -65],
+          deps: [27],
+		}, {
+          name: 'Elemental Might',
+          desc: ['Elemental enchantments on weapons and staves deal twice as much damage to resistant targets.'],
+          req: [70],
+          pos: [58, -98],
+          deps: [30],
+		}, {
+          name: 'Spellscribe',
+          desc: ['Grants the "Spellscribe" power: use it to store the spell you are dual casting. Your power attacks and power bashes unleash the stored spell for free, with a cooldown based on Enchanting skill. Only works with spells that affect other targets.'],
+          req: [40],
+          pos: [80, -72],
+          deps: [27],
+		}, {
+          name: 'Power Echoes',
+          desc: ['Spellscribe activates twice before going on cooldown.'],
+          req: [70],
+          pos: [66, -115],
+          deps: [32],
+		}, {
+          name: 'Might and Magic',
+          desc: ['You are adept at weaving blade and magic. Spells cast with your left hand are 10% more effective if you are wielding a weapon in your right hand. Attacks with a weapon in your right hand deal 10% more damage if you are holding a spell in your left hand.'],
+          req: [60],
+          pos: [88, -93],
+          deps: [32],
         }
       ]
     }, {
