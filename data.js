@@ -2941,80 +2941,156 @@
       cname: 'lockpicking',
       perks: [
         {
-          name: 'Novice Locks',
-          desc: ['Novice locks are much easier to pick.'],
+          name: 'Lockpicking Mastery',
+		  levels: 2,
+          desc: ['Weaker locks are easier to pick.', 'All locks are easier to pick.'],
+          req: [0, 20],
           pos: [0, 0],
-          id: ['000F392A']
         }, {
-          name: 'Apprentice Locks',
-          desc: ['Apprentice locks are much easier to pick.'],
-          req: [25],
-          pos: [31, -57],
+          name: 'Game of Fate',
+          desc: ['There are 5 Dragons of Fate hidden in random locked containers in Skyrim. Each grants 15000 gold and a free perk point when removed from its container. The name of the container changes to indicate the treasure inside.'],
+          req: [20],
+          pos: [-40, -8],
           deps: [0],
-          id: ['000BE125']
-        }, {
-          name: 'Quick Hands',
-          desc: ['Able to pick locks without being noticed.'],
-          req: [40],
-          pos: [-7, -87],
-          deps: [1],
-          id: ['00106259']
-        }, {
-          name: 'Wax Key',
-          desc: ["Automatically gives you a copy of a picked lock's key if it has one."],
+		}, {
+          name: 'Lockdown',
+          desc: ['Activate a hostile automaton to lockpick your way into its engine. Lock difficulty is based on its current Health. Pick its lock within 15 seconds to reduce its Health to 1 and shut it down for 60 seconds. If you fail, you can\'t try again for 30 seconds.'],
+          req: [30],
+          pos: [-46, -39],
+          deps: [0],
+		}, {
+          name: 'Hotwire',
+          desc: ['Activate an automaton under Lockdown to lockpick its brain. Succeed within 15 seconds to hack the automaton, forcing it to follow you and fight for you. If you fail, you can\'t try again for 30 seconds. You can only have one Hotwired Automaton at a time.'],
           req: [50],
-          pos: [-45, -106],
+          pos: [-69, -115],
           deps: [2],
-          id: ['00107830']
-        }, {
-          name: 'Adept Locks',
-          desc: ['Adept locks are much easier to pick.'],
+		}, {
+          name: 'Percussive Maintenance',
+          desc: ['Your Hotwired Automaton moves 30% faster and attacks 20% faster. Hitting your Hotwired Automaton with a mace or warhammer repairs it 150 points (or 300 points on a power attack) and further increases attack speed by 50% for 10 seconds.'],
+          req: [90],
+          pos: [-40, -150],
+          deps: [3],
+		}, {
+          name: 'Robber\'s Eye',
+          desc: ['When you enter a dwelling you don\'t own, illuminates a locked container for 120 seconds. During this time, it contains valuable items (based on your Lockpicking skill and the difficulty of its lock). This can only occur once every 12-60 ingame hours.'],
+          req: [30],
+          pos: [-11, -42],
+          deps: [0],
+		}, {
+          name: 'Nose for Treasure',
+          desc: ['You may choose an item type (gold, jewelry, books, ingredients, potions, ingots, weapons, armor, scrolls). Containers illuminated by Robber\'s Eye are three times more likely to contain items of your chosen type over other types.'],
           req: [50],
-          pos: [55, -111],
-          deps: [1],
-          id: ['000C3680']
-        }, {
-          name: 'Golden Touch',
-          desc: ['Find more gold in chests.'],
+          pos: [-39, -88],
+          deps: [5],
+		}, {
+          name: 'Gone in Fifteen Seconds',
+          desc: ['Taking 15 seconds or less to pick the lock on a container illuminated by Robber\'s Eye improves the added treasure by an average of 50% based on the level of the lock and resets the cooldown of Robber\'s Eye.'],
+          req: [40],
+          pos: [-2, -72],
+          deps: [5],
+		}, {
+          name: 'Dungeoneer',
+          desc: ['Robber\'s Eye also works in dungeons and lasts three times as long.'],
           req: [60],
-          pos: [13, -124],
-          deps: [4],
-          id: ['0005820A']
-        }, {
+          pos: [-22, -116],
+          deps: [6, 7],
+		}, {
+          name: 'Deep Dweller',
+          desc: ['Chaurus, skeevers, and spiders are friendly until attacked. Gain use of the Dungeon Sense lesser power.'],
+          req: [85],
+          pos: [-42, -128],
+          deps: [8],
+		}, {
+          name: 'Golden Touch',
+          desc: ['Find 20-100 more gold in many dungeon chests and 2-10 more gold in some corpses, urns, etc.'],
+          req: [60],
+          pos: [9, -118],
+          deps: [7],
+		}, {
           name: 'Treasure Hunter',
           desc: ['50% greater chance of finding special treasure.'],
+          req: [90],
+          pos: [-4, -137],
+          deps: [8, 10],
+		}, {
+          name: 'Archaeologist',
+          desc: ['In most dungeons, special chests contain six additional weapons or armor pieces.'],
+          req: [90],
+          pos: [-12, -154],
+          deps: [11],
+		}, {
+          name: 'Bear Traps',
+          desc: ['Able to pick up Bear Traps or create them at a Forge or Anvil, and drop them from your inventory to place them. The teeth of placed Bear Traps deal 2 points of damage per level of Lockpicking. You can only pick up and carry two Bear Traps at a time.'],
+          req: [20],
+          pos: [20, -32],
+          deps: [0],
+		}, {
+          name: 'Dungeon Delver',
+          desc: ['Most traps deal half damage to you, and five times as much damage to others.'],
           req: [70],
-          pos: [-15, -145],
-          deps: [5],
-          id: ['00105F26']
-        }, {
-          name: 'Expert Locks',
-          desc: ['Expert locks are much easier to pick.'],
-          req: [75],
-          pos: [59, -143],
-          deps: [4],
-          id: ['000C3681']
-        }, {
-          name: 'Locksmith',
-          desc: ['Pick starts close to the lock opening position.'],
+          pos: [7, -55],
+          deps: [13],
+		}, {
+          name: 'Lockjaw',
+          desc: ['Your Bear Traps stagger victims struck by the teeth, reducing their armor rating by 10 points per level of Lockpicking for 5 seconds.'],
+          req: [40],
+          pos: [40, -61],
+          deps: [13],
+		}, {
+          name: 'Big Game Hunter',
+          desc: ['Placed Bear Traps are 20% bigger and more likely to successfully hit small or fast moving targets. They also rearm themselves 2.5 seconds after being triggered.'],
+          req: [50],
+          pos: [20, -78],
+          deps: [15],
+		}, {
+          name: 'Bait',
+          desc: ['Grants the "Bait" power. At will, lures the nearest hostile target within 75 feet to the location of the nearest Bear Trap placed within 50 feet (not during combat or conversation). Lasts 30 seconds.'],
+          req: [70],
+          pos: [58, -100],
+          deps: [15],
+		}, {
+          name: 'Bushwhack',
+          desc: ['If the victim of your Bear Trap is not detecting you, the trap is five times as effective.'],
           req: [80],
-          pos: [22, -162],
-          deps: [7],
-          id: ['00058208']
-        }, {
-          name: 'Unbreakable',
-          desc: ['Lockpicks never break.'],
+          pos: [33, -128],
+          deps: [16, 17],
+		}, {
+          name: 'The Revenge',
+          desc: ['You can pick up and carry 3 Bear Traps.'],
+          req: [80],
+          pos: [65, -129],
+          deps: [17],
+		}, {
+          name: 'Dragon\'s Teeth',
+          desc: ['When placing a Bear Trap, you may choose to add an extra effect: Poison, Drain Magicka, Drain Stamina, Slow, Banish or Turn Undead. This effect is triggered when a victim is struck by the teeth and takes damage.'],
           req: [100],
-          pos: [0, -177],
-          deps: [8],
-          id: ['00058209']
-        }, {
-          name: 'Master Locks',
-          desc: ['Master locks are much easier to pick.'],
+          pos: [57, -163],
+          deps: [18, 19],
+		}, {
+          name: 'Quick Hands',
+          desc: ['Able to pick locks without being noticed.'],
+          req: [30],
+          pos: [50, -42],
+          deps: [0],
+		}, {
+          name: 'Wax Key',
+          desc: ['Gives you a copy of a picked lock\'s key if it has one.'],
+          req: [30],
+          pos: [58, -32],
+          deps: [0],
+		}, {
+          name: 'Locksmith',
+          desc: ['Pick starts much closer to the lock opening position.'],
+          req: [40],
+          pos: [70, -82],
+          deps: [21, 22],
+		}, {
+          name: 'Seen This Before',
+          desc: ['Your skill at lockpicking is such that you may bypass locks of Expert or lower level without using a key or manually picking the lock. After picking or bypassing at least 100 locks, you gain 2 perk points.'],
           req: [100],
-          pos: [67, -193],
-          deps: [7],
-          id: ['000C3682']
+          pos: [94, -154],
+          deps: [23],
+		
         }
       ]
     }, {
