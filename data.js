@@ -2176,77 +2176,149 @@
       cname: 'smithing',
       perks: [
         {
-          name: 'Steel Smithing',
-          desc: ['Can create Steel armor and weapons at forges, and improve them twice as much.'],
+          name: 'Smithing Mastery',
+		  levels: 2,
+          desc: ['You can create Novice (Steel/Bonemold) items at a forge or anvil, and improve them twice as much.', 'You can create Novice (Steel/Bonemold) items at a forge or anvil, and improve them twice as much. All items can be improved 10% more.'],
+          req: [0, 20],
           pos: [0, 0],
-          id: ['000CB40D']
         }, {
-          name: 'Elven Smithing',
-          desc: ['Can create Elven armor and weapons at forges, and improve them twice as much.'],
-          req: [30],
-          pos: [-55, -46],
+          name: 'Meric Smithing',
+		  levels: 2,
+          desc: ['Choose an item type: Contemporary Meric (Elven/Chitin), Dwarven. You can create items of the chosen type at a forge or anvil, and improve them twice as much. Investing a second perk point lets you choose both.', 'You can create both Contemporary Meric (Elven/Chitin) and Dwarven items at a forge or anvil, and improve them twice as much.'],
+          req: [30, 40],
+          pos: [-34, -11],
           deps: [0],
-          id: ['000CB40F']
-        }, {
-          name: 'Arcane Blacksmith',
-          desc: ['You can improve magical weapons and armor.'],
-          req: [60],
-          pos: [4, -45],
-          deps: [0],
-          id: ['0005218E']
-        }, {
-          name: 'Dwarven Smithing',
-          desc: ['Can create Dwarven armor and weapons at forges, and improve them twice as much.'],
-          req: [30],
-          pos: [42, -33],
-          deps: [0],
-          id: ['000CB40E']
-        }, {
-          name: 'Advanced Armors',
-          desc: ['Can create Scaled and Plate armor at forges, and improve them twice as much.'],
-          req: [50],
-          pos: [-49, -57],
-          captionOffset: [0, -13],
+		}, {
+          name: 'Expert Smithing',
+		  levels: 2,
+          desc: ['Choose an item type: Hard Steel (Scaled/Plate/Nordic), Orcish. You can create items of the chosen type at a forge or anvil, and improve them twice as much. Investing a second perk point lets you choose both.', 'You can create both Hard Steel (Scaled/Plate/Nordic) and Orcish items at a forge or anvil, and improve them twice as much.'],
+          req: [50, 60],
+          pos: [-65, -50],
           deps: [1],
-          id: ['000CB414']
-        }, {
-          name: 'Glass Smithing',
-          desc: ['Can create Glass armor and weapons at forges, and improve them twice as much.'],
-          req: [70],
-          pos: [-10, -70],
-          captionOffset: [0, -13],
-          deps: [4],
-          id: ['000CB411']
-        }, {
-          name: 'Orcish Smithing',
-          desc: ['Can create Orcish armor and weapons at forges, and improve them twice as much.'],
-          req: [50],
-          pos: [81, -51],
+		}, {
+          name: 'Exotic Smithing',
+		  levels: 2,
+          desc: ['Choose an item type: Glass, Crystalline (Ebony/Stalhrim). You can create items of the chosen type at a forge or anvil, and improve them twice as much. Investing a second perk point lets you choose both.', 'You can create both Glass and Crystalline (Ebony/Stalhrim) items at a forge or anvil, and improve them twice as much.'],
+          req: [70, 80],
+          pos: [-84, -108],
+          deps: [2],
+		}, {
+          name: 'Planar Smithing',
+		  levels: 2,
+          desc: ['Choose an item type: Daedric, Dragonbone. You can create items of the chosen type at a forge or anvil, and improve them twice as much. Investing a second perk point lets you choose both.', 'You can create both Daedric and Dragonbone items at a forge or anvil, and improve them twice as much.'],
+          req: [90, 100],
+          pos: [-56, -126],
           deps: [3],
-          id: ['000CB410']
-        }, {
-          name: 'Ebony Smithing',
-          desc: ['Can create Ebony armor and weapons at forges, and improve them twice as much.'],
-          req: [80],
-          pos: [114, -50],
-          captionOffset: [0, -13],
-          deps: [6],
-          id: ['000CB412']
-        }, {
-          name: 'Daedric Smithing',
-          desc: ['Can create Daedric armor and weapons at forges, and improve them twice as much.'],
-          req: [90],
-          pos: [59, -66],
-          captionOffset: [0, -13],
+		}, {
+          name: 'Dwarven Autocannon',
+          desc: ['You can create Dwemer Autocannons at a forge or anvil. Use the "Dwarven Autocannon" power to deploy them. Cannons fire parallel to your crosshair for 30 seconds, dealing damage equal to 30% of your Smithing skill, if you are within 12 feet.'],
+          req: [20],
+          pos: [-22, -34],
+          deps: [0],
+		}, {
+          name: 'Remote Control',
+          desc: ['Your Dwarven Autocannon now fires regardless of the distance between it and you.'],
+          req: [50],
+          pos: [-37, -43],
+          deps: [5],
+		}, {
+          name: 'Electrobolt',
+		  levels: 2,
+          desc: ['Every fifth Dwarven Autocannon shot is an electromagnetic blast that moves slower than a regular shell but deals shock damage to Health and Magicka equal to 80% of your Smithing skill level.', 'Every fifth Dwarven Autocannon shot is an electromagnetic blast that moves slower than a regular shell but deals shock damage to Health and Magicka equal to 240% of your Smithing skill level.'],
+          req: [40, 70],
+          pos: [-34, -86],
+          deps: [5],
+		}, {
+          name: 'Firing Line',
+          desc: ['Your Dwarven Autocannon now deploys two cannons side by side.'],
+          req: [70],
+          pos: [-47, -104],
           deps: [7],
-          id: ['000CB413']
-        }, {
-          name: 'Dragon Armor',
-          desc: ['Can create Dragon armor at forges, and improve them twice as much.'],
+		}, {
+          name: 'Spin Up',
+          desc: ['Your Dwarven Autocannon gradually shoots faster over time, gaining 2% firing speed per shot, up to 200%.'],
+          req: [80],
+          pos: [0, -108],
+          deps: [7],
+		}, {
+          name: 'Armor Padding',
+          desc: ['Can create Linen and Leather padding at a tanning rack. They are clothing or Light Armor, function as body armor, and can be enchanted at 25% strength.'],
+          req: [40],
+          pos: [-10, -48],
+          deps: [0],
+		}, {
+          name: 'Layered Plates',
+          desc: ['Can create Steel, Dwarven and Orichalcum armor plates at forges. They are Heavy Armor, function as body armor and can be enchanted at 25% strength.'],
+          req: [40],
+          pos: [10, -55],
+          deps: [0],
+		}, {
+          name: 'Hidden Enchantments',
+          desc: ['Can now enchant padding and armor plates at 50% strength.'],
+          req: [90],
+          pos: [0, -70],
+          deps: [10, 11],
+		}, {
+          name: 'Prospector',
+          desc: ['Find twice the ore and gems when mining. Gain a 25% bonus to Iron and basic Steel armor.'],
+          req: [80],
+          pos: [0, -28],
+          deps: [0],
+		}, {
+          name: 'Arcane Blacksmith',
+          desc: ['You can improve enchanted weapons and armor.'],
+          req: [40],
+          pos: [21, -42],
+          deps: [0],
+		}, {
+          name: 'Applied Knowledge',
+          desc: ['Fortify Smithing effects also increase weapon damage and armor rating.'],
+          req: [90],
+          pos: [12, -78],
+          deps: [14],
+		}, {
+          name: 'Advanced Workshop',
+          desc: ['You may choose to upgrade one grindstone or workbench to an Advanced version for 2500 gold. It improves items one tier higher (items can be improved beyond Legendary). Can be "Disassembled" by sneaking, allowing you to upgrade another of the same type.'],
+          req: [30],
+          pos: [39, -32],
+          deps: [0],
+		}, {
+          name: 'Recycle Materials',
+          desc: ['50% chance to retain any materials you spend at an Advanced Grindstone or Advanced Workbench.'],
+          req: [40],
+          pos: [54, -70],
+          deps: [16],
+		}, {
+          name: 'Sandstone Sheath',
+          desc: ['When you draw a weapon, it is automatically sharpened, granting 25% extra attack damage for 10 seconds. This can only occur once every 30 seconds.'],
+          req: [60],
+          pos: [31, -110],
+          deps: [17],
+		}, {
+          name: 'Smithing Specialization',
+          desc: ['You may choose an item type: One-Handed, Two-Handed, Light Armor, Heavy Armor or Archery. Items of the chosen type can be improved 20% better at a grindstone or workbench.'],
+          req: [60],
+          pos: [92, -96],
+          deps: [17],
+		}, {
+          name: 'Iron Lore',
+          desc: ['If you Specialized in an armor type, your attacks ignore 15% of the armor rating of enemies wearing items of the chosen type. If you Specialized in a weapon type, you take 10% less damage from weapons of the chosen type.'],
+          req: [80],
+          pos: [104, -118],
+          deps: [19],
+		}, {
+          name: 'Fuel the Inferno',
+          desc: ['When activating an Advanced Grindstone or Advanced Workbench, you may choose to sacrifice a Dragon Soul to improve items by a further one tier during that session.'],
+          req: [90],
+          pos: [56, -130],
+          deps: [17, 19],
+		}, {
+          name: 'Heart of Creation',
+          desc: ['Pour your Dragonborn blood into the fire at one forge. Forging an item in this forge empowers you, increasing attack damage and critical strike damage by 15% and reducing attack damage taken by 15% for 1800 seconds.'],
           req: [100],
-          pos: [27, -71],
-          deps: [5, 8],
-          id: ['00052190']
+          pos: [13, -151],
+          deps: [4, 21],
+		
         }
       ]
     }, {
