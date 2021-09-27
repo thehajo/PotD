@@ -2547,70 +2547,203 @@
       cname: 'marksman',
       perks: [
         {
-          name: 'Overdraw',
-          levels: 5,
-          desc: ['Bows do 20% more damage.', 'Bows do 40% more damage.', 'Bows do 60% more damage.', 'Bows do 80% more damage.', 'Bows do 100% more damage.'],
-          req: [0, 20, 40, 60, 80],
-          pos: [0, 0],
-          id: ['000BABED', '0007934A', '0007934B', '0007934D', '00079354']
-        }, {
-          name: 'Eagle Eye',
-          desc: ['Pressing Block while aiming will zoom in your view.'],
-          req: [30],
-          pos: [-74, -54],
-          deps: [0],
-          id: ['00058F61']
-        }, {
-          name: 'Critical Shot',
-          levels: 3,
-          desc: ['10% chance of a critical hit that does extra damage.', '15% chance of a critical hit that does extra damage.', '20% chance of a critical hit that does extra damage.'],
-          req: [30, 60, 90],
-          pos: [-15, -69],
-          deps: [0],
-          id: ['00105F1C', '00105F1E', '00105F1F']
-        }, {
-          name: 'Steady Hand',
+          name: 'Archery Mastery',
           levels: 2,
-          desc: ['Zooming in with a bow slows time by 25%.', 'Zooming in with a bow slows time by 50%.'],
-          req: [40, 60],
-          pos: [-49, -68],
+          desc: ['Bows and crossbows do 25% more damage.', 'Bows and crossbows do 50% more damage, and critical strikes with bows and crossbows do 2% more critical damage per level of Archery.'],
+          req: [0, 20],
+          pos: [0, 0],
+        }, {
+          name: 'Long Shot',
+		  levels: 3,
+          desc: ['Bows and crossbows deal up to 40% more damage to targets beyond 50 feet. The damage bonus increases as distance increases.', 'Bows and crossbows deal up to 60% more damage to targets beyond 50 feet. The damage bonus increases as distance increases.', 'Bows and crossbows deal up to 80% more damage to targets beyond 50 feet. The damage bonus increases as distance increases.'],
+          req: [30, 60, 90],
+          pos: [-66, -34],
+          deps: [0],
+		}, {
+          name: 'Impaling Shot',
+          desc: ['Ranged weapons wound the living for 15 seconds, causing them to bleed while running.'],
+          req: [40],
+          pos: [-98, -50],
           deps: [1],
-          id: ['00103ADA', '00103ADB']
-        }, {
-          name: 'Power Shot',
-          desc: ['Arrows stagger all but the largest opponents 50% of the time.'],
-          req: [50],
-          pos: [-92, -97],
-          deps: [1],
-          id: ['00058F62']
-        }, {
-          name: 'Quick Shot',
-          desc: ['Can draw a bow 30% faster.'],
-          req: [70],
-          pos: [-91, -151],
-          deps: [4],
-          id: ['00105F19']
-        }, {
-          name: "Hunter's Discipline",
-          desc: ['Recover twice as many arrows from dead bodies.'],
-          req: [50],
-          pos: [-39, -121],
+		}, {
+          name: 'Arrow to the Knee',
+          desc: ['Ranged weapons knock targets down if they are sprinting, inflicting a critical strike for 2 times critical damage.'],
+          req: [80],
+          pos: [-118, -92],
           deps: [2],
-          id: ['00051B12']
-        }, {
-          name: 'Ranger',
-          desc: ['Able to move faster with a drawn bow.'],
+		}, {
+          name: 'Thread the Needle',
+		  levels: 2,
+          desc: ['Bows and crossbows ignore 25% armor if the target is not moving.', 'Bows and crossbows ignore 50% armor if the target is not moving.'],
+          req: [40, 70],
+          pos: [-95, -81],
+          deps: [1],
+		}, {
+          name: 'Ambush Predator',
+          desc: ['After standing still for 6 seconds with a bow or crossbow out, it does 25% more damage until you move.'],
+          req: [70],
+          pos: [-112, -139],
+          deps: [4],
+		}, {
+          name: 'Three Crows',
+          desc: ['Shooting a target beyond 25 feet three times in rapid succession, leaving less than 2.75 seconds between each hit, deals bonus damage equal to 15% of the target\'s current Health (max. 150 damage) and knocks the target to the ground.'],
+          req: [90],
+          pos: [-99, -190],
+          deps: [5],
+		}, {
+          name: 'Point Blank Shot',
+		  levels: 2,
+          desc: ['Ranged weapons do up to 20% more damage to targets within 20 feet, based on proximity.', 'Ranged weapons do up to 40% more damage to targets within 20 feet, based on proximity.'],
+          req: [25, 50],
+          pos: [-38, -50],
+          deps: [0],
+		}, {
+          name: 'Crippling Shot',
+          desc: ['Arrows and bolts slow a target within 25 feet by 10% for 20 seconds. This effect stacks.'],
+          req: [40],
+          pos: [-63, -70],
+          deps: [7],
+		}, {
+          name: 'Power Shot',
+          desc: ['Arrows stagger all but the largest opponents 50% of the time. Critical hits with all weapons deal 50% more damage.'],
           req: [60],
-          pos: [-47, -141],
-          deps: [6],
-          id: ['00058F63']
-        }, {
-          name: 'Bullseye',
-          desc: ['15% chance of paralyzing the target for a few seconds.'],
+          pos: [-61, -99],
+          deps: [7],
+		}, {
+          name: 'Beak and Talon',
+          desc: ['Your shots disrupt targets within 25 feet, disarming them if they are power attacking and knocking them down if they are staggered.'],
+          req: [70],
+          pos: [-73, -152],
+          deps: [9],
+		}, {
+          name: 'Perfect Aim',
+          desc: ['Bows deal 25% more damage if the shot strikes a target within 2 seconds after the bow is fully drawn. Crossbows deal triple damage to targets with 20% or less Health remaining.'],
           req: [100],
-          pos: [-65, -166],
-          deps: [5, 7],
-          id: ['00058F64']
+          pos: [-48, -220],
+          deps: [6, 10],
+		}, {
+          name: 'Ethereal Arrows',
+          desc: ['Firing a bow without any arrows equipped will fire an ethereal arrow from your magicka pool. Damage of these arrows improve slightly with some perks that affect bound weapons.'],
+          req: [10],
+          pos: [-6, -38],
+          deps: [0],
+		}, {
+          name: 'Clean Kill',
+          desc: ['Bows and crossbows deal 20% more damage to a target at full Health.'],
+          req: [20],
+          pos: [18, -38],
+          deps: [0],
+		}, {
+          name: 'Snipe',
+          desc: ['Shooting targets you haven\'t shot within the past 10 seconds inflicts a critical strike that deals three times critical damage, and any weapon enchantments applied by the shot are twice as effective.'],
+          req: [60],
+          pos: [-47, -117],
+          deps: [13],
+		}, {
+          name: 'Shadowstick',
+          desc: ['Bow attacks are guaranteed to critically hit when firing from out of combat.'],
+          req: [80],
+          pos: [-57, -140],
+          deps: [9, 14],
+		}, {
+          name: 'Overdraw',
+          desc: ['Critical hits with a bow have a 10% chance to deal lethal damage. All weapons are 5% more likely to critically hit.'],
+          req: [90],
+          pos: [-49, -175],
+          deps: [15],
+		}, {
+          name: 'And They All Fall Down',
+          desc: ['Bow attacks have a 15% chance to cripple the target for 12 seconds. Targets without vulnerable knees will be paralyzed instead.'],
+          req: [100],
+          pos: [-22, -211],
+          deps: [16],
+		}, {
+          name: 'Quick Shot',
+          desc: ['Can draw a bow or reload a crossbow 30% faster.'],
+          req: [60],
+          pos: [-9, -112],
+          deps: [13],
+		}, {
+          name: 'Hawkeye',
+          desc: ['Grants the "Hawkeye" power. Once a day, slow time and focus on your foes for 10 seconds, looking for opportunities for a killing shot. Finding their vulnerability takes 1 second per 125 Health. Once you do, you may shoot them for an instant kill.'],
+          req: [80],
+          pos: [-18, -183],
+          deps: [14, 18],
+		}, {
+          name: 'Hailstorm',
+          desc: ['Attack 8% faster with bows and crossbows for 10 seconds after shooting a fully drawn bow or crossbow in combat. This effect stacks.'],
+          req: [80],
+          pos: [11, -174],
+          deps: [18],
+		}, {
+          name: 'Ranger',
+          desc: ['Can move at full speed with a drawn bow. (Do not take this perk while sneaking.)'],
+          req: [50],
+          pos: [41, -99],
+          deps: [13],
+		}, {
+          name: 'Focus on the Prey',
+          desc: ['Cannot be staggered while holding a drawn bow or reloading a crossbow.'],
+          req: [60],
+          pos: [30, -149],
+          deps: [21],
+		}, {
+          name: 'Lion\'s Arrow',
+          desc: ['Grants the "Lion\'s Arrow" power: use it to store the spell you are dual casting. Shooting a fully drawn bow in combat also releases the stored spell in the direction of the crosshair. Only works with spells that affect other targets.'],
+          req: [90],
+          pos: [38, -212],
+          deps: [22],
+		}, {
+          name: 'Steady Hand',
+		  levels: 3,
+          desc: ['Pressing Block while aiming will zoom in your view.', 'Pressing Block while aiming will zoom in your view and slow time by 25%.', 'Pressing Block while aiming will zoom in your view and slow time by 50%.'],
+          req: [30, 60, 90],
+          pos: [57, -41],
+          deps: [0],
+		}, {
+          name: 'Breaching Shot',
+          desc: ['Ranged weapons knock the shield out of an opponent\'s hands if they are blocking, inflicting a critical strike.'],
+          req: [40],
+          pos: [52, -70],
+          deps: [24],
+		}, {
+          name: 'Hunter\'s Discipline',
+          desc: ['Recover twice as many arrows and bolts from dead bodies.'],
+          req: [40],
+          pos: [82, -82],
+          deps: [24],
+		}, {
+          name: 'Trick Arrows',
+          desc: ['Able to upgrade many types of arrows at a forge or anvil, adding a bonus effect (Force, Immolation, Freezing, Grounding, Maze or Death) based on its material.'],
+          req: [80],
+          pos: [55, -174],
+          deps: [26],
+		}, {
+          name: 'Hunt Together',
+          desc: ['When fighting only one enemy, hitting the target with a bow or crossbow manifests a Spirit Wolf for 30 seconds. The wolf deals damage equal to 15% of your current Stamina. This effect has a 30 second cooldown per target.'],
+          req: [90],
+          pos: [84, -208],
+          deps: [26],
+		}, {
+          name: 'Survivalist',
+          desc: ['Most wild animals are friendly until attacked. Gain use of the Hunter\'s Sight lesser power.'],
+          req: [55],
+          pos: [99, -106],
+          deps: [26],
+		}, {
+          name: 'Wingstrike',
+		  levels: 2,
+          desc: ['Bashing with a bow or crossbow staggers the target. Bows and crossbows deal 20% more damage to that target for 10 seconds.', 'Bashing with a bow or crossbow always staggers the target. Bows and crossbows deal 40% more damage to that target for 10 seconds.'],
+          req: [20, 50],
+          pos: [50, -3],
+          deps: [0],
+		}, {
+          name: 'Knockout',
+          desc: ['Bashing with a bow briefly knocks the target out. This ability can only be used once every 15 seconds.'],
+          req: [40],
+          pos: [73, -20],
+          deps: [30],
+		
         }
       ]
     }, {
