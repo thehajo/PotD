@@ -3022,61 +3022,189 @@
       cname: 'pickpocket',
       perks: [
         {
-          name: 'Light Fingers',
-          levels: 5,
-          desc: ['Pickpocketing bonus of 20%. Item weight and value reduce pickpocketing odds.', 'Pickpocketing bonus of 40%. Item weight and value reduce pickpocketing odds.', 'Pickpocketing bonus of 60%. Item weight and value reduce pickpocketing odds.', 'Pickpocketing bonus of 80%. Item weight and value reduce pickpocketing odds.', 'Pickpocketing bonus of 100%. Item weight and value reduce pickpocketing odds.'],
-          req: [0, 20, 40, 60, 80],
+          name: 'Pickpocket Mastery',
+          levels: 2,
+          desc: ['Adds 20% to your pickpocket chance and increases carry weight by 50 points.', 'Adds 40% to your pickpocket chance and increases carry weight by 100 points.'],
+          req: [0, 20],
           pos: [0, 0],
-          id: ['000BE124', '00018E6A', '00018E6B', '00018E6C', '00018E6D']
         }, {
-          name: 'Night Thief',
-          desc: ['+25% chance to pickpocket if the target is asleep.'],
-          req: [30],
-          pos: [25, -50],
+          name: 'Trained Rabbit',
+          desc: ['Grants the "Trained Rabbit" power. At will, silently sends out a trained rabbit to lead you to the nearest loose valuable item (armor, weapon, key, book, soul gem, ingredient). It then returns to you.'],
+          req: [20],
+          pos: [-40, -12],
           deps: [0],
-          id: ['00058202']
-        }, {
-          name: 'Poisoned',
-          desc: ['Silently harm enemies by placing poisons in their pockets.'],
-          req: [40],
-          pos: [13, -106],
-          deps: [1],
-          id: ['00105F28']
-        }, {
+		}, {
           name: 'Cutpurse',
-          desc: ['Pickpocketing gold is 50% easier.'],
+          desc: ['Odds of pickpocketing gold, keys, gems and jewelry increased by 50%.'],
+          req: [30],
+          pos: [-5, -23],
+          deps: [0],
+		}, {
+          name: 'Brotherhood Cocktai',
+          desc: ['Silently harm enemies by placing poisons in their pockets while pickpocketing.'],
           req: [40],
-          pos: [44, -107],
-          deps: [1],
-          id: ['00058204']
-        }, {
-          name: 'Extra Pockets',
-          desc: ['Carrying capacity is increased by 100.'],
-          req: [50],
-          pos: [72, -105],
-          deps: [1],
-          id: ['00096590']
-        }, {
-          name: 'Keymaster',
-          desc: ['Pickpocketing keys almost always works.'],
-          req: [60],
-          pos: [21, -128],
-          deps: [3],
-          id: ['000D79A0']
-        }, {
-          name: 'Misdirection',
-          desc: ['Can pickpocket equipped weapons.'],
+          pos: [-67, -31],
+          deps: [2],
+		}, {
+          name: 'Trickster',
+          desc: ['Can pickpocket equipped weapons, necklaces and rings.'],
           req: [70],
-          pos: [55, -157],
+          pos: [-66, -90],
           deps: [3],
-          id: ['00058201']
-        }, {
+		}, {
           name: 'Perfect Touch',
           desc: ['Can pickpocket equipped items.'],
           req: [100],
-          pos: [72, -162],
+          pos: [-51, -114],
+          deps: [4],
+		}, {
+          name: 'Brigand\'s Brew',
+          desc: ['Consuming alcohol increases your melee damage by 30% for 15 seconds.'],
+          req: [45],
+          pos: [-48, -44],
+          deps: [3],
+		}, {
+          name: 'Drunken Rage',
+          desc: ['Consuming alcohol has a chance of sending you into a drunken rage, increasing melee damage and reducing damage taken by 50% each. This chance increases the more you drink.'],
+          req: [80],
+          pos: [-35, -68],
           deps: [6],
-          id: ['00058205']
+		}, {
+          name: 'Underworld Contacts',
+          desc: ['Sell items to fences for 25% higher prices.'],
+          req: [60],
+          pos: [-33, -37],
+          deps: [2],
+		}, {
+          name: 'On the Run',
+          desc: ['After you successfully pickpocket someone, sneaking is 200% more effective and movement speed is increased by 25% for 10 seconds.'],
+          req: [40],
+          pos: [-59, -72],
+          deps: [2],
+		}, {
+          name: 'Oblivious',
+          desc: ['Pickpocketing odds increased by 25% if the target is not detecting you.'],
+          req: [50],
+          pos: [-24, -52],
+          deps: [2],
+		}, {
+          name: 'Master Thief',
+          desc: ['Pickpocketing a character automatically steals all of their gold, with no chance of detection.'],
+          req: [90],
+          pos: [-23, -90],
+          deps: [10],
+		}, {
+          name: 'Payday',
+          desc: ['Most citizens carry 100 more gold on average.'],
+          req: [40],
+          pos: [-9, -67],
+          deps: [2],
+		}, {
+          name: 'Conspicuous Wealth',
+          desc: ['The richest citizens carry more valuables such as gems, enchanted jewelry, and spell tomes.'],
+          req: [80],
+          pos: [-40, -82],
+          deps: [12],
+		}, {
+          name: 'Lawless Times',
+		  levels: 2,
+          desc: ['Your bounties for nonviolent crimes diminish at a rate of 50 gold per day.', 'Your bounties for nonviolent crimes diminish at a rate of 200 gold per day.'],
+          req: [60, 90],
+          pos: [8, -60],
+          deps: [2],
+		}, {
+          name: 'Stalk the Prey',
+          desc: ['Preparing to pickpocket (sneaking behind a victim with the pickpocket message displayed) for at least 10 seconds adds 20% to your chance to pickpocket any item.'],
+          req: [60],
+          pos: [-30, -110],
+          deps: [9, 14],
+		}, {
+          name: 'You Saw Nothing',
+          desc: ['Grants the "You Saw Nothing" power. Once a day, distract a target and others in a 40 foot radius around the target. For 45 seconds, you will not receive a bounty if they are the only witness of your crimes. Does not prevent them from defending themselves.'],
+          req: [80],
+          pos: [-59, -139],
+          deps: [15],
+		}, {
+          name: 'Robbed Blind',
+          desc: ['Adds the Thief\'s Eye effect to You Saw Nothing.'],
+          req: [90],
+          pos: [-50, -168],
+          deps: [16],
+		}, {
+          name: 'Thief\'s Eye',
+          desc: ['When you enter a major city, illuminates a random citizen on the streets for 300 seconds. If you interact with the target during this time, they will carry valuable items (based on your Pickpocket skill). This can only occur once every 12-60 ingame hours.'],
+          req: [30],
+          pos: [20, -38],
+          deps: [0],
+		}, {
+          name: 'Thief\'s Luck',
+          desc: ['You may choose an item type (gold, jewelry, books, ingredients, potions, ingots, scrolls). Those illuminated by Thief\'s Eye are three times more likely to carry items of your chosen type over other types.'],
+          req: [50],
+          pos: [29, -83],
+          deps: [18],
+		}, {
+          name: 'Flutter',
+          desc: ['When not wearing any armor, you have a chance to take no damage from incoming attacks. This chance increases with your pickpocket skill (max 25%).'],
+          req: [55],
+          pos: [19, -110],
+          deps: [19],
+		}, {
+          name: 'Crime Wave',
+          desc: ['Shortly after you pickpocket or speak with the target illuminated by Thief\'s Eye, a new victim is illuminated, up to 4 times in a row.'],
+          req: [80],
+          pos: [-13, -115],
+          deps: [19],
+		}, {
+          name: 'Death\'s Emperor',
+		  levels: 2,
+          desc: ['A cursed septim appears in your inventory. When someone else is in possession of the coin, your attacks deal 100% more damage and critical damage to them.', 'A cursed septim appears in your inventory. When someone else is in possession of the coin, your attacks deal 200% more damage and critical damage to them.'],
+          req: [40, 70],
+          pos: [49, -43],
+          deps: [0],
+		}, {
+          name: 'Doomed to Plunder',
+          desc: ['Killing a victim in possession of the Death\'s Emperor grants 100-300 more gold.'],
+          req: [70],
+          pos: [39, -105],
+          deps: [22],
+		}, {
+          name: 'Mutiny',
+          desc: ['Grants the "Mutiny" power. At will, activates the curse of the Death\'s Emperor, causing whoever is in possession of the coin to attack randomly for 30 seconds. Any deaths resulting from this can\'t be traced back to you.'],
+          req: [90],
+          pos: [24, -154],
+          deps: [23],
+		}, {
+          name: 'Dragon Hoard',
+          desc: ['Whenever you sleep with 50000 or more gold in your inventory, you may choose to spend it to purchase a perk point.'],
+          req: [100],
+          pos: [-27, -172],
+          deps: [15, 21, 23],
+		}, {
+          name: 'Blood Money',
+          desc: ['You find 10-100 more gold when looting humanoid corpses slain in an especially violent fashion (with an attack that dealt at least 100 more damage than their remaining Health or a killmove).'],
+          req: [20],
+          pos: [48, -11],
+          deps: [0],
+		}, {
+          name: 'Acid Splash',
+          desc: ['As long as one hand is free, melee attacks deal 50% more critical damage and have a 20% chance to deal extra poison damage over 3 seconds.'],
+          req: [70],
+          pos: [33, -65],
+          deps: [26],
+		}, {
+          name: 'Blade Catcher',
+          desc: ['As long as one hand is free (unarmed or spell), melee attacks deal 20% more damage and you have a 10% chance to disarm attackers that strike you in melee.'],
+          req: [90],
+          pos: [2, -85],
+          deps: [27],
+		}, {
+          name: 'Cheap Shot',
+          desc: ['As long as one hand is free, power attacks have a 25% chance to cripple the target. Unarmed attacks have a 5% higher chance to critically hit.'],
+          req: [100],
+          pos: [8, -125],
+          deps: [28],
+		
+
         }
       ]
     }, {
