@@ -2326,61 +2326,188 @@
       cname: 'heavyarmor',
       perks: [
         {
-          name: 'Juggernaut',
-          levels: 5,
-          desc: ['Increases armor rating for Heavy Armor by 20%.', 'Increases armor rating for Heavy Armor by 40%.', 'Increases armor rating for Heavy Armor by 60%.', 'Increases armor rating for Heavy Armor by 80%.', 'Increases armor rating for Heavy Armor by 100%.'],
-          req: [0, 20, 40, 60, 80],
+          name: 'Heavy Armor Mastery',
+          levels: 2,
+          desc: ['Armor rating of Heavy Armor increased by 20%. You gain a small amount of Heavy Armor experience when wearing at least two pieces of Heavy Armor in combat.', 'Armor rating of Heavy Armor increased by 40%. You gain a small amount of Heavy Armor experience when wearing at least two pieces of Heavy Armor in combat.'],
+          req: [0, 20],
           pos: [0, 0],
-          id: ['000BCD2A', '0007935E', '00079361', '00079362', '00079374']
         }, {
-          name: 'Fists of Steel',
-          desc: ['Unarmed attacks with Heavy Armor gauntlets do their armor rating in extra damage.'],
+          name: 'Battle Weary',
+          desc: ['Tired enemies have a harder time defeating your armor. You take up to 20% less attack damage from enemies with half or less Stamina, if wearing all Heavy Armor. The lower their Stamina, the less damage you take.'],
           req: [30],
-          pos: [-55, -56],
+          pos: [-60, -34],
           deps: [0],
-          id: ['00058F6E']
-        }, {
-          name: 'Cushioned',
-          desc: ['Half damage from falling if wearing all Heavy Armor: head, chest, hands, feet.'],
-          req: [50],
-          pos: [-85, -111],
+		}, {
+          name: 'Break Upon Me',
+          desc: ['You are immune to basic melee weapon perks (Clash of Champions/Heroes, Denting/Crushing Blows, Bleed Like a Lamb/Dog, Bite Marks). If wearing all Heavy Armor, you take 10% less attack damage from enemies affected by one or more of these perks.'],
+          req: [60],
+          pos: [-96, -75],
           deps: [1],
-          id: ['000BCD2B']
-        }, {
-          name: 'Conditioning',
-          desc: ["Heavy Armor weighs nothing and doesn't slow you down when worn."],
-          req: [70],
-          pos: [-81, -170],
+		}, {
+          name: 'Rise Above',
+          desc: ['If wearing all Heavy Armor, you intimidate enemies within 15 feet. They lose 5% attack damage and you gain 5% attack damage for each enemy affected.'],
+          req: [80],
+          pos: [-110, -140],
           deps: [2],
-          id: ['00058F6D']
-        }, {
-          name: 'Well Fitted',
-          desc: ['25% Armor bonus if wearing all Heavy Armor: head, chest, hands, feet.'],
-          req: [30],
-          pos: [51, -56],
-          deps: [0],
-          id: ['00058F6F']
-        }, {
-          name: 'Tower of Strength',
-          desc: ['50% less stagger when wearing only Heavy Armor.'],
-          req: [50],
-          pos: [70, -111],
-          deps: [4],
-          id: ['00058F6C']
-        }, {
-          name: 'Matching Set',
-          desc: ['Additional 25% Armor bonus if wearing a matched set of Heavy Armor.'],
+		}, {
+          name: 'Primal Fear',
+          desc: ['If wearing all Heavy Armor, walking (but not running) towards living enemies within 30 feet in front of you may break their confidence, causing them to flee for 8 seconds.'],
+          req: [90],
+          pos: [-120, -150],
+          deps: [3],
+		}, {
+          name: 'Reap the Whirlwind',
+          desc: ['When struck by a power attack or power bash, your attacks deal 125% more damage to the attacker for 5 seconds if wearing all Heavy Armor.'],
           req: [70],
-          pos: [82, -143],
+          pos: [-89, -118],
+          deps: [2],
+		}, {
+          name: 'Sovereign',
+          desc: ['When struck by an attack, subsequent attacks are deflected if wearing all Heavy Armor. You take 75% reduced damage from attacks for 1 second.'],
+          req: [90],
+          pos: [-95, -144],
           deps: [5],
-          id: ['00107832']
-        }, {
-          name: 'Reflect Blows',
-          desc: ['10% chance to reflect melee damage back to the enemy while wearing all Heavy Armor: head, chest, hands, feet.'],
+		}, {
+          name: 'Face of the Mountain',
+          desc: ['When struck by a power attack or power bash, the attacker\'s strike rebounds forcefully as if striking solid rock, staggering them and potentially knocking them to the ground if wearing all Heavy Armor.'],
           req: [100],
-          pos: [72, -198],
+          pos: [-90, -163],
           deps: [6],
-          id: ['00105F33']
+		}, {
+          name: 'Immovable Object',
+          desc: ['Taking an incoming hit in all Heavy Armor has 10% chance to stagger the attacker.'],
+          req: [40],
+          pos: [-64, -71],
+          deps: [1],
+		}, {
+          name: 'Mounted Knight',
+          desc: ['When fighting on horseback you deal double damage and take half damage. When fighting on foot you take 20% less damage from melee attacks.'],
+          req: [55],
+          pos: [-75, -93],
+          deps: [8],
+		}, {
+          name: 'Warded Plate',
+          desc: ['For each piece of heavy armor equipped, there is a 5% chance for incoming fire, frost, and shock spells to deal no damage (maximum 20% chance).'],
+          req: [65],
+          pos: [-54, -120],
+          deps: [9],
+		}, {
+          name: 'Iron Will',
+          desc: ['Grants immunity to paralysis and the strongest Unrelenting Force shouts.'],
+          req: [80],
+          pos: [-38, -147],
+          deps: [10],
+		}, {
+          name: 'Adamant',
+          desc: ['20% chance of ignoring all damage from a melee attack.'],
+          req: [90],
+          pos: [-57, -177],
+          deps: [11],
+		}, {
+          name: 'Born to Fight',
+          desc: ['Heavy Armor weighs half as much and slows you down half as much when worn.'],
+          req: [50],
+          pos: [-28, -96],
+          deps: [1],
+		}, {
+          name: 'Cushioned',
+		  levels: 2,
+          desc: ['You take half damage from falling if wearing all Heavy Armor.', 'You take no damage from falling if wearing all Heavy Armor.'],
+          req: [20, 50],
+          pos: [8, -42],
+          deps: [0],
+		}, {
+          name: 'Thick Padding',
+          desc: ['When you are wearing mostly heavy armor, arrow damage is reduced by half and frost resistance is increased by 20%.'],
+          req: [30],
+          pos: [-19, -58],
+          deps: [14],
+		}, {
+          name: 'Unyielding',
+		  levels: 2,
+          desc: ['You gain 50% Health Regeneration when wearing three pieces of heavy armor.', 'You gain 100% Health Regeneration when wearing three pieces of heavy armor.'],
+          req: [45, 70],
+          pos: [-14, -83],
+          deps: [15],
+		}, {
+          name: 'Heavy Armor Fit',
+          desc: ['Armor rating of Heavy Armor increased by 25% if wearing all Heavy Armor.'],
+          req: [30],
+          pos: [51, -31],
+          deps: [0],
+		}, {
+          name: 'Face of Death',
+          desc: ['You no longer need to wear a helmet to benefit from perks that require "wearing all Heavy Armor". If you are not wearing a helmet, Heavy Armor pieces have 20% increased armor rating.'],
+          req: [40],
+          pos: [3, -70],
+          deps: [17],
+		}, {
+          name: 'Defiance',
+          desc: ['You are trained to deflect incoming attacks while wearing all Heavy Armor. Whenever an enemy attacks you, you gain 15 points of armor rating for 10 seconds. This effect stacks.'],
+          req: [40],
+          pos: [37, -84],
+          deps: [17],
+		}, {
+          name: 'Revel in Battle',
+          desc: ['Defiance also increases melee weapon damage by 3% for 10 seconds. This effect stacks.'],
+          req: [50],
+          pos: [17, -105],
+          deps: [19],
+		}, {
+          name: 'Lead the Tempest',
+          desc: ['Sprinting in combat increases the armor of allied people within 20 feet by 25% of your own armor, and the armor of allied Skeletons created by Bone Collector within 20 feet by 15% of your own armor. Lasts 30 seconds.'],
+          req: [70],
+          pos: [-6, -160],
+          deps: [13, 18, 20],
+		}, {
+          name: 'Bedrock',
+          desc: ['If wearing all Heavy Armor, you have 20% chance to brace for impact when attacked by an enemy, becoming immune to stagger for 4 seconds.'],
+          req: [60],
+          pos: [31, -130],
+          deps: [19],
+		}, {
+          name: 'Rallying Standard',
+          desc: ['Grants the "Rallying Standard" power. Once a day, place a banner that grants 150 points of armor and 25% melee damage to allies within 25 feet wearing all Heavy Armor (including you) and prevents them from fleeing. Lasts 60 seconds.'],
+          req: [40],
+          pos: [82, -70],
+          deps: [17],
+		}, {
+          name: 'Warbringer',
+          desc: ['Raising your hands (to draw a weapon or spell) places a Rallying Standard at your location for 120 seconds. This does not count against the limit of one Rallying Standard at a time.'],
+          req: [80],
+          pos: [106, -147],
+          deps: [23],
+		}, {
+          name: 'Doombringer',
+          desc: ['Rallying Standard also improves Destruction spells and effects by 15%.'],
+          req: [90],
+          pos: [120, -176],
+          deps: [24],
+		}, {
+          name: 'Never Kneel',
+          desc: ['Take 25% less damage from power attacks and bashes if wearing all Heavy Armor.'],
+          req: [60],
+          pos: [62, -123],
+          deps: [19, 23],
+		}, {
+          name: 'Trust the Steel',
+          desc: ['You take 25% less damage while power attacking, drawing a bow, or casting a spell when wearing three pieces of heavy armor.'],
+          req: [75],
+          pos: [55, -168],
+          deps: [26],
+		}, {
+          name: 'Out of the Inferno',
+          desc: ['Incoming fire, earth, frost, water, shock, and wind damage reduced by 0.02% per point of armor if wearing all Heavy Armor.'],
+          req: [80],
+          pos: [82, -152],
+          deps: [26],
+		}, {
+          name: 'Immortal',
+          desc: ['If wearing all Heavy Armor, take 75% less damage from attacks below 15% Health (or 20% Health if you are affected by Rallying Standard).'],
+          req: [90],
+          pos: [100, -188],
+          deps: [24, 28],
+		
         }
       ]
     }, {
@@ -2388,71 +2515,208 @@
       cname: 'block',
       perks: [
         {
-          name: 'Shield Wall',
-          levels: 5,
-          desc: ['Blocking is 20% more effective.', 'Blocking is 25% more effective.', 'Blocking is 30% more effective.', 'Blocking is 35% more effective.', 'Blocking is 40% more effective.'],
-          req: [0, 20, 40, 60, 80],
+          name: 'Block Mastery',
+          levels: 2,
+          desc: ['Block 10% more damage.', 'Block 20% more damage.'],
+          req: [0, 20],
           pos: [0, 0],
-          id: ['000BCCAE', '00079355', '00079356', '00079357', '00079358']
         }, {
-          name: 'Deflect Arrows',
-          desc: ['Arrows that hit the shield do no damage.'],
-          req: [30],
-          pos: [-103, -53],
+          name: 'Timed Block',
+		  levels: 2,
+          desc: ['Assume a defensive position for 1 second after raising your shield or weapon, blocking 30% more damage and staggering attackers in melee range. (If you do not block an attack during this time, you cannot attempt another Timed Block for 2 seconds.)', 'Assume a defensive position for 1 second after raising your shield or weapon, blocking 30% more damage and staggering attackers in melee range. (If you do not block an attack during this time, you cannot attempt another Timed Block for 1 second.)'],
+          req: [20, 50],
+          pos: [-60, -21],
           deps: [0],
-          id: ['00058F68']
-        }, {
-          name: 'Quick Reflexes',
-          desc: ["Time slows down if you are blocking during an enemy's power attack."],
+		}, {
+          name: 'Poke the Dragon',
+          desc: ['After a successful Timed Block within 8 feet, you may retaliate with increased strength, increasing your attack damage and critical strike damage against the attacker by 25% for 5 seconds.'],
           req: [30],
-          pos: [-24, -70],
-          captionOffset: [0, -13],
-          deps: [0],
-          id: ['000D8C33']
-        }, {
-          name: 'Power Bash',
-          desc: ['Able to do a power bash.'],
-          req: [30],
-          pos: [83, -54],
-          deps: [0],
-          id: ['00058F67']
-        }, {
-          name: 'Elemental Protection',
-          desc: ['Blocking with a shield reduces incoming fire, frost, and shock damage by 50%.'],
-          req: [50],
-          pos: [-72, -131],
+          pos: [-90, -40],
           deps: [1],
-          id: ['00058F69']
-        }, {
-          name: 'Block Runner',
-          desc: ['Able to move faster with a shield raised.'],
-          req: [70],
-          pos: [-43, -149],
-          captionOffset: [0, -13],
-          deps: [4],
-          id: ['00106253']
-        }, {
-          name: 'Deadly Bash',
-          desc: ['Bashing does five times more damage.'],
-          req: [50],
-          pos: [79, -109],
+		}, {
+          name: 'Apocalypse Proof',
+		  levels: 2,
+          desc: ['Perform a Timed Block to mitigate incoming elemental spells and effects, reducing their damage by 50%.', 'Perform a Timed Block to mitigate incoming fire, earth, frost, water, shock, and wind spells and effects, reducing their damage to zero.'],
+          req: [40, 70],
+          pos: [-92, -62],
+          deps: [2],
+		}, {
+          name: 'Timing Streak',
+          desc: ['Performing 3 successful Timed Blocks in a row completes a Timing Streak, restoring 75 points of Stamina. (Taking an unblocked attack or blocking an attack outside the timed block window breaks the combo.)'],
+          req: [60],
+          pos: [-89, -96],
           deps: [3],
-          id: ['0005F594']
-        }, {
-          name: 'Disarming Bash',
-          desc: ['Chance to disarm when power bashing.'],
-          req: [70],
-          pos: [60, -151],
-          deps: [6],
-          id: ['00058F66']
-        }, {
-          name: 'Shield Charge',
-          desc: ['Sprinting with a shield raised knocks down most targets.'],
+		}, {
+          name: 'Break Their Teeth',
+          desc: ['Completing a Timing Streak violently disarms the last attacker, staggering all within an 8 foot radius.'],
+          req: [80],
+          pos: [-57, -118],
+          deps: [4],
+		}, {
+          name: 'Deliverance',
+          desc: ['Completing a Timing Streak grants 10% extra attack damage for 90 seconds. This effect stacks.'],
+          req: [90],
+          pos: [-42, -140],
+          deps: [5],
+		}, {
+          name: 'Dragon Tail',
+          desc: ['After a successful Timed Block, bashing the attacker within 5 seconds deals double damage.'],
+          req: [60],
+          pos: [-50, -97],
+          deps: [2],
+		}, {
+          name: 'Dragon Scales',
+          desc: ['You take no damage from attacks during a Timed Block as long as you have Stamina remaining.'],
           req: [100],
-          pos: [1, -167],
-          captionOffset: [0, -13],
-          deps: [7, 5],
-          id: ['00058F6A']
+          pos: [-25, -150],
+          deps: [6, 7],
+		}, {
+          name: 'Block Runner',
+          desc: ['Can move at full speed while blocking.'],
+          req: [70],
+          pos: [18, -99],
+          deps: [1],
+		}, {
+          name: 'Hold the Line',
+          desc: ['During a Timed Block, allies within 10 feet gain 250 points of armor rating.'],
+          req: [90],
+          pos: [28, -125],
+          deps: [9],
+		}, {
+          name: 'Unwavering Defense',
+          desc: ['Blocking an attack damages the attacker\'s Stamina by 15 points.'],
+          req: [20],
+          pos: [-38, -28],
+          deps: [0],
+		}, {
+          name: 'Mule Kick',
+          desc: ['Bashing with a shield have a 20% chance to daze the target.'],
+          req: [65],
+          pos: [-65, -47],
+          deps: [11],
+		}, {
+          name: 'Stalwart Defender',
+          desc: ['Stamina regenerates at its full rate even in combat.'],
+          req: [40],
+          pos: [-46, -57],
+          deps: [11],
+		}, {
+          name: 'Quick Reflexes',
+          desc: ['Time slows down if you are blocking during an enemy\'s power attack.'],
+          req: [40],
+          pos: [-1, -60],
+          deps: [11],
+		}, {
+          name: 'Weapon Block',
+          desc: ['Blocking with weapons is 25% more effective.'],
+          req: [30],
+          pos: [-15, -34],
+          deps: [0],
+		}, {
+          name: 'Retaliation',
+          desc: ['Blocking an attack has a 30% chance to trigger a 20% increase to melee damage for 4 seconds.'],
+          req: [65],
+          pos: [0, -45],
+          deps: [15],
+		}, {
+          name: 'Adventurous Parry',
+          desc: ['Blocking with a torch is twice as effective.'],
+          req: [30],
+          pos: [9, -32],
+          deps: [0],
+		}, {
+          name: 'Torch Bash',
+          desc: ['Bashing with a torch deals ten times as much fire damage and causes living opponents to flee in panic.'],
+          req: [40],
+          pos: [27, -62],
+          deps: [17],
+		}, {
+          name: 'Nightwatch Trick',
+          desc: ['Bashing opponents with a torch gives their attacks against you a 30% chance to become a glancing blow (10% damage) for 8 seconds.'],
+          req: [55],
+          pos: [37, -89],
+          deps: [18],
+		}, {
+          name: 'Deflect Arrows',
+          desc: ['While blocking with a shield or weapon, arrows do half damage. Arrows that hit the shield do no damage.'],
+          req: [30],
+          pos: [35, -31],
+          deps: [0],
+		}, {
+          name: 'Dominion',
+          desc: ['Take 25% less attack damage from any direction when blocking in combat.'],
+          req: [50],
+          pos: [7, -77],
+          deps: [20],
+		}, {
+          name: 'Stoneheart',
+          desc: ['Can\'t be staggered by power attacks and bashes while blocking.'],
+          req: [100],
+          pos: [-17, -90],
+          deps: [21],
+		}, {
+          name: 'Indomitable',
+          desc: ['You take 20% less damage. Blocking staggers the attacker 20% of the time.'],
+          req: [90],
+          pos: [-11, -122],
+          deps: [13, 21],
+		}, {
+          name: 'Brave the Gap',
+          desc: ['You have a 20% chance to gain a burst of speed if an arrow hits you while you\'re blocking.'],
+          req: [50],
+          pos: [54, -51],
+          deps: [20],
+		}, {
+          name: 'Power Bash',
+          desc: ['Able to do a power bash by holding down Attack while blocking.'],
+          req: [40],
+          pos: [82, -32],
+          deps: [0],
+		}, {
+          name: 'Skull Rattler',
+          desc: ['Bashing deals 3% more damage per point of Stamina.'],
+          req: [50],
+          pos: [90, -73],
+          deps: [25],
+		}, {
+          name: 'Turn the Blade',
+          desc: ['Power bashing reduces enemy weapon damage by 25% for 10 seconds.  '],
+          req: [60],
+          pos: [62, -69],
+          deps: [26],
+		}, {
+          name: 'Wallop',
+          desc: ['Power bashing causes enemies to take 25% more damage for 10 seconds.  '],
+          req: [80],
+          pos: [55, -92],
+          deps: [27],
+		}, {
+          name: 'Bear the Wall',
+          desc: ['Power bashing an enemy below half Health has a chance to knock them to the ground.'],
+          req: [100],
+          pos: [43, -110],
+          deps: [28],
+		}, {
+          name: 'Cast Aside',
+          desc: ['Interrupting an attack with a power bash with a shield knocks the attacker to the ground. Targets can only be affected once every 30 seconds.'],
+          req: [80],
+          pos: [51, -130],
+          deps: [26],
+		}, {
+          name: 'Unstoppable Force',
+          desc: ['Able to sprint with a shield raised. This knocks enemies in your path to the ground, but costs 10 points of Stamina per second. Enemies can only be affected once every 10 seconds.'],
+          req: [90],
+          pos: [8, -140],
+          deps: [30],
+		}, {
+          name: 'Mocking Blow',
+          desc: ['Power bashing with a weapon infuriates living targets for 30 seconds. They won\'t flee from combat but can\'t regenerate Stamina, lose 15 points of Stamina per second and you take no damage from their attacks during a Timed Block.'],
+          req: [70],
+          pos: [82, -118],
+          deps: [26],
+		
+
+
         }
       ]
     }, {
@@ -2712,83 +2976,330 @@
       cname: 'onehanded',
       perks: [
         {
-          name: 'Armsman',
-          levels: 5,
-          desc: ['One-Handed weapons do 20% more damage.', 'One-Handed weapons do 40% more damage.', 'One-Handed weapons do 60% more damage.', 'One-Handed weapons do 80% more damage.', 'One-Handed weapons do 100% more damage.'],
-          req: [0, 20, 40, 60, 80],
-          pos: [0, 0],
-          id: ['000BABE4', '00079343', '00079342', '00079344', '00079345']
-        }, {
-          name: 'Hack and Slash',
-          levels: 3,
-          desc: ['Attacks with war axes cause extra bleeding damage.', 'Attacks with war axes cause extra bleeding damage.', 'Attacks with war axes cause extra bleeding damage.'],
-          req: [30, 60, 90],
-          pos: [-45, -86],
-          deps: [0],
-          id: ['0003FFFA', '000C3678', '000C3679']
-        }, {
-          name: 'Fighting Stance',
-          desc: ['Power attacks with one-handed-weapons cost 25% less stamina.'],
-          req: [20],
-          pos: [0, -56],
-          deps: [0],
-          id: ['00052D50']
-        }, {
-          name: 'Bone Breaker',
-          levels: 3,
-          desc: ['Attacks with maces ignore 25% of armor.', 'Attacks with maces ignore 50% of armor.', 'Attacks with maces ignore 75% of armor.'],
-          req: [30, 60, 90],
-          pos: [23, -86],
-          deps: [0],
-          id: ['0005F592', '000C1E92', '000C1E93']
-        }, {
-          name: 'Bladesman',
-          levels: 3,
-          desc: ['Attacks with swords have a 10% chance of doing critical damage.', 'Attacks with swords have a 15% chance of doing critical damage.', 'Attacks with swords have a 20% chance of doing critical damage.'],
-          req: [30, 60, 90],
-          pos: [46, -86],
-          captionOffset: [0, -13],
-          deps: [0],
-          id: ['0005F56F', '000C1E90', '000C1E91']
-        }, {
-          name: 'Dual Flurry',
+          name: 'One-Handed Mastery',
           levels: 2,
-          desc: ['Dual wielding attacks are 20% faster.', 'Dual wielding attacks are 35% faster.'],
-          req: [30, 50],
-          pos: [88, -40],
+          desc: ['One-handed weapons do 25% more damage.', 'One-handed weapons do 50% more damage, and critical strikes with one-handed weapons do 2% more critical damage per level of One-Handed.'],
+          req: [0, 20],
+          pos: [0, -35],
+        }, {
+          name: 'Jinada',
+          desc: ['All weapons swing 15% faster and critical damage is increased by 50% when wielding one or more one-handed weapons.'],
+          req: [40],
+          pos: [0, -28],
           deps: [0],
-          id: ['00106256', '00106257']
-        }, {
-          name: 'Dual Savagery',
-          desc: ['Dual wielding power attacks do 50% bonus damage.'],
-          req: [70],
-          pos: [62, -163],
-          captionOffset: [0, -13],
-          deps: [5],
-          id: ['00106258']
-        }, {
-          name: 'Savage Strike',
-          desc: ['Standing power attacks do 25% bonus damage with a chance to decapitate your enemies.'],
-          req: [50],
-          pos: [-20, -122],
-          deps: [2],
-          id: ['0003AF81']
-        }, {
-          name: 'Critical Charge',
-          desc: ['Can do a one-handed power attack while sprinting that does double critical damage.'],
-          req: [50],
-          pos: [14, -122],
-          captionOffset: [0, -13],
-          deps: [2],
-          id: ['000CB406']
-        }, {
-          name: 'Paralyzing Strike',
-          desc: ['Backwards power attack has a 25% chance to paralyze the target.'],
+		}, {
+          name: 'Bladesman',
+          desc: ['Attacks with one-handed swords are 30% faster. Attacks with all other weapons are 15% faster. Cannot be taken with Bone Breaker or Hack and Slash.'],
+          req: [55],
+          pos: [-14, -14],
+          deps: [1],
+		}, {
+          name: 'Bone Breaker',
+          desc: ['Attacks with maces have a 10% chance to stagger the target. Attacks with all weapons ignore 50% of armor. Cannot be taken with Bladesman or Hack and Slash.'],
+          req: [55],
+          pos: [14, -14],
+          deps: [1],
+		}, {
+          name: 'Hack and Slash',
+          desc: ['Attacks with war axes deal 50% more critical damage. Attacks with all weapons are 5% more likely to critically hit. Cannot be taken with Bone Breaker or Bladesman.'],
+          req: [55],
+          pos: [1, 0],
+          deps: [2, 3],
+		}, {
+          name: 'Paralyzing Flurry',
+          desc: ['For 6 seconds following a one-handed backwards power attack, all attacks paralyze their target. This can only occur once every 20 seconds.'],
           req: [100],
-          pos: [2, -216],
-          captionOffset: [0, -13],
-          deps: [7, 8],
-          id: ['0003AFA6']
+          pos: [1, -19],
+          deps: [4],
+		}, {
+          name: 'Furious Strength',
+          desc: ['Power attack damage with one-handed weapons increased by 15% plus 0.1% per point of Stamina. Unlocks decapitations.'],
+          req: [40],
+          pos: [-51, -31],
+          deps: [0],
+		}, {
+          name: 'Overrun',
+          desc: ['Can perform a one-handed sprinting power attack that deals up to 50% more damage and critical damage to a target above half Health. The higher its remaining Health percentage, the more damage and critical damage is dealt.'],
+          req: [50],
+          pos: [-65, -78],
+          deps: [6],
+		}, {
+          name: 'Crater Maker',
+          desc: ['One-handed forwards power attacks have 25% chance to knock targets down, inflicting a critical strike for 2 times critical damage.'],
+          req: [60],
+          pos: [-67, -105],
+          deps: [7],
+		}, {
+          name: 'Finishing Blow',
+          desc: ['Power attacks with One-handed weapons deal extra damage based on the target\'s missing Health.'],
+          req: [80],
+          pos: [-67, -133],
+          deps: [8],
+		}, {
+          name: 'Disciplined Fighter',
+          desc: ['Reduces the Stamina cost of power attacks with one-handed weapons by 15 points.'],
+          req: [20],
+          pos: [-32, -42],
+          deps: [0],
+		}, {
+          name: 'Rogue\'s Parry',
+          desc: ['When wielding a one-handed weapon and an empty other hand, attacking with the weapon while the opponent is winding up their attack or drawing a bow deals 40% more damage and delivers a critical strike.'],
+          req: [50],
+          pos: [-50, -64],
+          deps: [10],
+		}, {
+          name: 'Disarming Slash',
+          desc: ['One-handed sideways power attacks have 25% chance to disarm targets, inflicting a critical strike for 2 times critical damage.'],
+          req: [90],
+          pos: [-53, -97],
+          deps: [11],
+		}, {
+          name: 'Flash Riposte',
+          desc: ['Blocking with a one-handed weapon or shield has a 20% chance to trigger a riposte, making your next attack 150% faster.'],
+          req: [100],
+          pos: [-56, -117],
+          deps: [12],
+		}, {
+          name: 'Thundering Blow',
+          desc: ['Whenever you perform a total of 8 or more one-handed regular attacks in combat, your next one-handed power attack is a Thundering Blow that deals double damage and costs no Stamina, resetting the counter.'],
+          req: [70],
+          pos: [-41, -82],
+          deps: [10],
+		}, {
+          name: 'Aftershock',
+          desc: ['After a Thundering Blow, attack speed is increased by 75% for 3 seconds.'],
+          req: [90],
+          pos: [-46, -128],
+          deps: [14],
+		}, {
+          name: 'Bleed Like a Lamb',
+		  levels: 3,
+          desc: ['Attacks with war axes deal an additional 1 point of damage per second for 3 seconds to living targets. When the bleeding stops, they take damage equal to 15% of the Health they lost while bleeding.', 'Attacks with war axes deal an additional 2 points of damage per second for 3 seconds to living targets. When the bleeding stops, they take damage equal to 20% of the Health they lost while bleeding.', 'Attacks with war axes deal an additional 3 points of damage per second for 3 seconds to living targets. When the bleeding stops, they take damage equal to 25% of the Health they lost while bleeding.'],
+          req: [30, 60, 90],
+          pos: [-18, -49],
+          deps: [0],
+		}, {
+          name: 'Mangle',
+		  levels: 2,
+          desc: ['Attacks with a war axe ignore 25% armor if the target is staggered.', 'Attacks with a war axe ignore 50% armor if the target is staggered.'],
+          req: [40, 70],
+          pos: [-27, -70],
+          deps: [16],
+		}, {
+          name: 'Shieldbiter',
+          desc: ['Forwards power attacks with a war axe smash through a block, causing the target to drop their shield and take a critical strike that deals five times critical damage.'],
+          req: [50],
+          pos: [-21, -103],
+          deps: [17],
+		}, {
+          name: 'Wolfstooth',
+          desc: ['Sideways power attacks with a war axe grant 15% extra attack damage for 30 seconds. This effect stacks.'],
+          req: [60],
+          pos: [-30, -124],
+          deps: [18],
+		}, {
+          name: 'Go for the Throat',
+          desc: ['Standing power attacks with a war axe remove all active instances of Wolfstooth on the user, dealing 50% bonus damage and a critical strike for 250% bonus critical damage for each instance consumed.'],
+          req: [70],
+          pos: [-30, -151],
+          deps: [19],
+		}, {
+          name: 'Apex Predator',
+          desc: ['Attacks with war axes deal bonus damage to living targets equal to 4% of their current Health (max. 40 damage).'],
+          req: [80],
+          pos: [-21, -164],
+          deps: [20],
+		}, {
+          name: 'Denting Blows',
+		  levels: 3,
+          desc: ['Attacks with maces reduce the armor rating of armored enemies by 50 points for 15 seconds.', 'Attacks with maces reduce the armor rating of armored enemies by 75 points for 15 seconds.', 'Attacks with maces reduce the armor rating of armored enemies by 100 points for 15 seconds.'],
+          req: [30, 60, 90],
+          pos: [-9, -58],
+          deps: [0],
+		}, {
+          name: 'Smite',
+		  levels: 2,
+          desc: ['Power attacks with a mace deliver a critical strike that deals three times critical damage (four times against the undead). Targets can only be struck by Smite once every 30 seconds.', 'Power attacks with a mace deliver a critical strike that deals six times critical damage (eight times against the undead). Targets can only be struck by Smite once every 30 seconds.'],
+          req: [40, 70],
+          pos: [-7, -78],
+          deps: [22],
+		}, {
+          name: 'Rise Kinsmen',
+          desc: ['Forwards power attacks with a mace inspire nearby allies, granting them 20% extra attack damage for 15 seconds. This effect stacks.'],
+          req: [50],
+          pos: [-8, -98],
+          deps: [23],
+		}, {
+          name: 'Toll the Bell',
+          desc: ['Sideways power attacks with a mace deplete all of your Stamina on impact, dealing 1% more damage per point of Stamina depleted and doing a critical strike.'],
+          req: [60],
+          pos: [-8, -121],
+          deps: [24],
+		}, {
+          name: 'Meteor Storm',
+          desc: ['Each standing power attack with a mace that hits a target empowers subsequent standing power attacks with a mace within 20 seconds, increasing their damage and Stamina cost by 15%. This effect stacks.'],
+          req: [70],
+          pos: [-8, -145],
+          deps: [25],
+		}, {
+          name: 'Skull Crack',
+          desc: ['Attacks with maces interrupt spellcasting. Does not work on massive targets.'],
+          req: [80],
+          pos: [-6, -168],
+          deps: [26],
+		}, {
+          name: 'Clash of Champions',
+		  levels: 3,
+          desc: ['Attacks with swords reduce the target\'s attack damage by 10% for 3 seconds.', 'Attacks with swords reduce the target\'s attack damage by 15% for 3 seconds.', 'Attacks with swords reduce the target\'s attack damage by 20% for 3 seconds.'],
+          req: [30, 60, 90],
+          pos: [10, -63],
+          deps: [0],
+		}, {
+          name: 'Cross Cut',
+		  levels: 2,
+          desc: ['Unblocked regular attacks with a sword increase the damage of your power attacks against the target by 25% for 4 seconds.', 'Unblocked regular attacks with a sword increase the damage of your power attacks against the target by 50% for 4 seconds.'],
+          req: [40, 70],
+          pos: [8, -84],
+          deps: [28],
+		}, {
+          name: 'Falling Sword',
+          desc: ['Forwards power attacks with a sword cause targets to bleed for 20 seconds. When a bleeding target falls below 25% Health, your attacks against that target are critical strikes that deals ten times critical damage.'],
+          req: [50],
+          pos: [13, -104],
+          deps: [29],
+		}, {
+          name: 'Windswept',
+          desc: ['Sideways power attacks with a sword fling targets backwards up to 6 feet, dealing up to 40% more damage based on distance traveled.'],
+          req: [60],
+          pos: [15, -135],
+          deps: [30],
+		}, {
+          name: 'Into the Dust',
+          desc: ['Repeated standing power attacks with a sword against a target do escalating damage if no more than 3 seconds pass between each. This effect stacks up to three times, each doing 15% more damage. Reaching four stacks knocks the target off their feet.'],
+          req: [70],
+          pos: [11, -151],
+          deps: [31],
+		}, {
+          name: 'Judgment',
+          desc: ['Slaying an enemy under the effect of Clash of Champions restores 100 points of Stamina.'],
+          req: [80],
+          pos: [12, -181],
+          deps: [32],
+		}, {
+          name: 'Bite Marks',
+		  levels: 3,
+          desc: ['Unblocked attacks with daggers deal an additional 1 point of bleed damage per second for 30 seconds to living targets. This effect stacks.', 'Unblocked attacks with daggers deal an additional 2 points of bleed damage per second for 45 seconds to living targets. This effect stacks.', 'Unblocked attacks with daggers deal an additional 3 points of bleed damage per second for 60 seconds to living targets. This effect stacks.'],
+          req: [30, 60, 90],
+          pos: [19, -54],
+          deps: [0],
+		}, {
+          name: 'Savage',
+		  levels: 2,
+          desc: ['Attacks with a dagger deal 25% more damage if you rapidly hit the target three or more times. Resets when 2 seconds pass between hits.', 'Attacks with a dagger deal 50% more damage if you rapidly hit the target three or more times. Resets when 2 seconds pass between hits.'],
+          req: [40, 70],
+          pos: [25, -73],
+          deps: [34],
+		}, {
+          name: 'Twin Fang',
+          desc: ['Forwards power attacks with a dagger impale the target, dealing double Bite Marks damage, whether or not the attack is blocked.'],
+          req: [50],
+          pos: [25, -94],
+          deps: [35],
+		}, {
+          name: 'Swaying Cobra',
+          desc: ['Sideways power attacks with a dagger inflict distracting wounds, draining 100 points of Magicka and Stamina and halting regeneration for 5 seconds.'],
+          req: [60],
+          pos: [31, -125],
+          deps: [36],
+		}, {
+          name: 'Death Adder',
+          desc: ['Standing power attacks with a dagger ignore armor.'],
+          req: [70],
+          pos: [26, -145],
+          deps: [37],
+		}, {
+          name: 'Coiling Python',
+          desc: ['Hitting a target with a forwards, sideways and backwards power attack with a dagger within 30 seconds paralyzes the target for 20 seconds. Your attacks against the paralyzed target are critical strikes that deal nine times critical damage.'],
+          req: [80],
+          pos: [32, -186],
+          deps: [38],
+		}, {
+          name: 'Wandering Warrior',
+          desc: ['Whenever you defeat at least 4 humanoids and/or animals in a single battle, you gain a permanent +1% bonus to one-handed damage. This effect stacks up to +20%.'],
+          req: [100],
+          pos: [-10, -205],
+          deps: [21, 27, 33, 39],
+		}, {
+          name: 'Guile',
+		  levels: 2,
+          desc: ['When wielding a one-handed weapon in one hand and nothing in the other, attack speed increases by 20%', 'When wielding a one-handed weapon in one hand and nothing in the other, attack speed increases by 40%'],
+          req: [30, 60],
+          pos: [32, -50],
+          deps: [0],
+		}, {
+          name: 'Vigorous',
+          desc: ['Reduces Stamina cost for power attacks by 30% when single wielding.'],
+          req: [50],
+          pos: [40, -83],
+          deps: [41],
+		}, {
+          name: 'Tactician',
+          desc: ['When wielding a one-handed weapon in one hand and nothing in the other, there is a 10% chance to slow time during an enemy\'s power attack, with a 20% chance to deal lethal damage while slowed.'],
+          req: [80],
+          pos: [42, -112],
+          deps: [42],
+		}, {
+          name: 'Ravage',
+		  levels: 2,
+          desc: ['Dual wielding attacks are 20% faster.', 'Dual wielding attacks are 35% faster.'],
+          req: [30, 60],
+          pos: [32, -28],
+          deps: [0],
+		}, {
+          name: 'Sagacious Warrior',
+          desc: ['Grants bonuses based on chosen weapon style perks (dual or single) while wielding one-handed weapons in any configuration (including one-handed weapons and shields).'],
+          req: [60],
+          pos: [23, -40],
+          deps: [41, 44],
+		}, {
+          name: 'Debonaire',
+          desc: ['When wielding one-handed weapons (dual or single) and nothing else, armor rating increases by 20%.'],
+          req: [40],
+          pos: [47, -46],
+          deps: [41, 44],
+		}, {
+          name: 'Man O\'War',
+          desc: ['While dual wielding in combat, build up a battle rage with each attack, gaining 1% extra attack damage and 1% bonus attack speed for 20 seconds. This effect stacks.'],
+          req: [60],
+          pos: [63, -52],
+          deps: [44],
+		}, {
+          name: 'Dervish',
+          desc: ['Increases run speed by 10% while wielding one-handed weapons (single or duel) and grants the Whirlwind ability.'],
+          req: [70],
+          pos: [50, -102],
+          deps: [42, 47],
+		}, {
+          name: 'Bladedancer',
+          desc: ['Take 50% less attack damage while power attacking with two weapons.'],
+          req: [80],
+          pos: [63, -91],
+          deps: [47],
+		}, {
+          name: 'Unleash the Beast',
+          desc: ['While dual wielding in combat, enter a murderous frenzy every 20 to 40 seconds. For 8 seconds, dual wield power attacks deal 50% more damage and 100% more critical damage.'],
+          req: [80],
+          pos: [57, -119],
+          deps: [49],
+		}, {
+          name: 'Murderous Intent',
+          desc: ['When wielding a single one-handed weapon and nothing else or two one-handed weapons, there is a small chance of doing lethal damage or staggering the opponent.'],
+          req: [90],
+          pos: [46, -141],
+          deps: [43, 50],
+		
+
+
         }
       ]
     }, {
