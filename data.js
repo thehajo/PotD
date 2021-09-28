@@ -2823,48 +2823,197 @@
       cname: 'lightarmor',
       perks: [
         {
-          name: 'Agile Defender',
-          levels: 5,
-          desc: ['Increase armor rating for Light armor by 20%.', 'Increase armor rating for Light armor by 40%.', 'Increase armor rating for Light armor by 60%.', 'Increase armor rating for Light armor by 80%.', 'Increase armor rating for Light armor by 100%.'],
-          req: [0, 20, 40, 60, 80],
+          name: 'Light Armor Mastery',
+          levels: 2,
+          desc: ['Armor rating of Light Armor increased by 20%. You gain a small amount of Light Armor experience when wearing at least two pieces of Light Armor in combat.', 'Armor rating of Light Armor increased by 40%. You gain a small amount of Light Armor experience when wearing at least two pieces of Light Armor in combat.'],
+          req: [0, 20],
           pos: [0, 0],
-          id: ['000BE123', '00079376', '00079389', '00079391', '00079392']
         }, {
-          name: 'Custom Fit',
-          desc: ['25% Armor bonus if wearing all Light Armor: head, chest, hands, feet.'],
-          req: [30],
-          pos: [-15, -62],
+          name: 'Annoying Mosquitoes',
+          desc: ['You take 10% less attack damage from enemies with full Health if wearing all Light Armor.'],
+          req: [20],
+          pos: [-36, -6],
           deps: [0],
-          id: ['00051B1B']
-        }, {
-          name: 'Unhindered',
-          desc: ["Light Armor weighs nothing and doesn't slow you down when worn."],
-          req: [50],
-          pos: [-47, -110],
-          deps: [1],
-          id: ['00051B1C']
-        }, {
-          name: 'Matching Set',
-          desc: ['Additional 25% Armor bonus if wearing a matched set of Light Armor.'],
-          req: [70],
-          pos: [8, -153],
-          deps: [1],
-          id: ['00051B17']
-        }, {
-          name: 'Wind Walker',
-          desc: ['Stamina regenerates 50% faster in all Light Armor: head, chest, hands, feet.'],
-          req: [60],
-          pos: [-42, -143],
+		}, {
+          name: 'Iron Fist',
+		  levels: 3,
+          desc: ['Increases unarmed damage by 5% of your current Stamina, and you gain Light Armor experience when using unarmed attacks in combat. Requires two free hands.', 'Increases unarmed damage by 15% of your current Stamina, and you gain Light Armor experience when using unarmed attacks in combat. Requires two free hands.', 'Increases unarmed damage by 25% of your current Stamina, and you gain Light Armor experience when using unarmed attacks in combat. Requires two free hands.'],
+          req: [20, 50, 80],
+          pos: [-40, -33],
+          deps: [0],
+		}, {
+          name: 'Pugilist',
+		  levels: 3,
+          desc: ['Unarmed attacks deal 15 extra damage.', 'Unarmed attacks deal 30 extra damage.', 'Unarmed attacks deal 45 extra damage.'],
+          req: [40, 60, 80],
+          pos: [-63, -29],
           deps: [2],
-          id: ['00105F22']
-        }, {
-          name: 'Deft Movement',
-          desc: ['10% chance of avoiding all damage from a melee attack while wearing all Light Armor: head, chest, hands, feet.'],
+		}, {
+          name: 'Pummel',
+		  levels: 2,
+          desc: ['Unarmed power attacks deal 25% more damage and cost 25% less Stamina.', 'Unarmed power attacks have a chance to knock down enemies when they fall below half Health, while wearing heavy gauntlets. '],
+          req: [60],
+          pos: [-77, -48],
+          deps: [3],
+		}, {
+          name: 'Hammer Arm',
+          desc: ['Unarmed power attacks deal extra damage based on the target\'s missing Health.'],
+          req: [90],
+          pos: [-50, -58],
+          deps: [3],
+		}, {
+          name: 'Sweeping Wind',
+          desc: ['Unarmed power attacks do 25% more damage. Additionally, if your movement speed is increased, they do 2% damage per 1% movement speed. Requires two free hands.'],
+          req: [40],
+          pos: [-69, -63],
+          deps: [2],
+		}, {
+          name: 'Rushing Tide',
+          desc: ['Unarmed attacks grant 10% increased Stamina regeneration and 5% movement speed for 8 seconds. This effect stacks. Requires two free hands.'],
+          req: [50],
+          pos: [-88, -95],
+          deps: [6],
+		}, {
+          name: 'Flurry of Blows',
+		  levels: 2,
+          desc: ['Power attacks with two empty hands cost 50% less Stamina and have a 50% chance to stagger opponents, potentially disarming them.', 'Power attacks with two empty hands cost 75% less Stamina and have a 50% chance to stagger opponents, potentially disarming them.'],
+          req: [60, 90],
+          pos: [-99, -110],
+          deps: [7],
+		}, {
+          name: 'Breaking Waves',
+          desc: ['Unarmed attacks have 15% chance of a critical strike that deals critical damage equal to 40% of your current Stamina. If you are affected by Wardancer, every hit is a critical strike. Requires two free hands.'],
+          req: [90],
+          pos: [-87, -150],
+          deps: [7],
+		}, {
+          name: 'Hissing Dragon',
+          desc: ['You may choose a damage type (fire, earth, frost, water, shock, wind, poison, disease or sun). Unarmed attacks unleash a shockwave that deals the chosen damage type to all targets in front of you. Requires two free hands. Does not activate while sneaking.'],
+          req: [70],
+          pos: [-72, -128],
+          deps: [7],
+		}, {
+          name: 'Light Armor Fit',
+          desc: ['Armor rating of Light Armor increased by 25% if wearing all Light Armor.'],
+          req: [30],
+          pos: [-10, -34],
+          deps: [0],
+		}, {
+          name: 'Unhindered',
+          desc: ['Light Armor weighs nothing and doesn\'t slow you down when worn.'],
+          req: [50],
+          pos: [-65, -88],
+          deps: [6, 11],
+		}, {
+          name: 'Into the Maelstrom',
+          desc: ['You take 10% less attack damage when fighting more than one enemy if wearing all Light Armor.'],
+          req: [60],
+          pos: [-66, -104],
+          deps: [12],
+		}, {
+          name: 'Insulating Wards',
+          desc: ['For each piece of light armor equipped, potions and armor spells have a 10% longer duration (maximum 40% increase).'],
+          req: [55],
+          pos: [-25, -63],
+          deps: [11],
+		}, {
+          name: 'Tough Hide',
+          desc: ['Wearing all Light Armor grants 40% Poison Resist and Disease Resist.'],
+          req: [80],
+          pos: [-43, -78],
+          deps: [14],
+		}, {
+          name: 'Initiative',
+		  levels: 2,
+          desc: ['When you enter combat, if wearing all Light Armor, regenerate up to 10% of your maximum Stamina per second. This bonus gradually diminishes over the course of 15 seconds.', 'When you enter combat, if wearing all Light Armor, regenerate up to 20% of your maximum Stamina per second. This bonus gradually diminishes over the course of 15 seconds.'],
+          req: [40, 70],
+          pos: [-16, -73],
+          deps: [11],
+		}, {
+          name: 'Lightning Strike',
+          desc: ['Your critical strikes deal 75% more critical damage for 10 seconds after entering combat while wearing all Light Armor.'],
+          req: [90],
+          pos: [-50, -93],
+          deps: [16],
+		}, {
+          name: 'Fight or Flight',
+          desc: ['When you get struck by an unblocked attack or hostile spell in combat, an adrenaline rush regenerates 5% of your maximum Stamina per second for 6 seconds if wearing all Light Armor.'],
+          req: [70],
+          pos: [-51, -117],
+          deps: [16],
+		}, {
+          name: 'Survival Instinct',
+          desc: ['When you get struck by an unblocked attack or hostile spell in combat, gain 10% movement speed for 6 seconds if wearing all Light Armor.'],
+          req: [80],
+          pos: [-61, -144],
+          deps: [18],
+		}, {
+          name: 'Unhindered',
+          desc: ['Power attacks cost 25% less Stamina when wearing three pieces of light armor.'],
+          req: [65],
+          pos: [-29, -113],
+          deps: [16],
+		}, {
+          name: 'Lithe',
+          desc: ['Power attacks have a 25% chance to cost no Stamina when wearing three pieces of light armor.'],
+          req: [90],
+          pos: [-44, -135],
+          deps: [20],
+		}, {
+          name: 'Windrunner',
+          desc: ['Move 10% faster in combat if wearing all Light Armor.'],
+          req: [50],
+          pos: [-10, -106],
+          deps: [16],
+		}, {
+          name: 'Wardancer',
+          desc: ['Your agility enables you to strike more effectively, granting 20% more attack damage and critical damage if wearing all Light Armor. This effect is lost for 6 seconds whenever you get struck by an unblocked attack or a hostile spell in combat.'],
+          req: [70],
+          pos: [-19, -129],
+          deps: [22],
+		}, {
+          name: 'Spelldancer',
+          desc: ['Wardancer also improves elemental spells and effects by the same amount.'],
+          req: [80],
+          pos: [-15, -155],
+          deps: [23],
+		}, {
+          name: 'Glancing Blows',
+          desc: ['You take 30% less damage from blocked attacks while Wardancer is active. When you lose the Wardancer effect due to an unblocked attack, it also deals 30% less damage.'],
+          req: [90],
+          pos: [-36, -150],
+          deps: [23],
+		}, {
+          name: 'Tempting Fate',
+          desc: ['You gain 20% movement speed if you are not blocking during an enemy\'s power attack. If the power attack misses, the effect lasts until combat ends or until you get struck by a power attack.'],
           req: [100],
-          pos: [-15, -170],
-          captionOffset: [0, -13],
-          deps: [3, 4],
-          id: ['00107831']
+          pos: [-42, -187],
+          deps: [19, 25],
+		}, {
+          name: 'Evasive Leap',
+          desc: ['If wearing all Light Armor, jump in combat to cause all incoming attacks and spells to miss for 1 second. This effect has a 5 second cooldown.'],
+          req: [60],
+          pos: [11, -116],
+          deps: [11],
+		}, {
+          name: 'Wild and Free',
+		  levels: 2,
+          desc: ['While sprinting in Light Armor, you take 50% less damage from attacks.'],
+          req: [80],
+          pos: [3, -140],
+          deps: [27],
+		}, {
+          name: 'Keen Senses',
+          desc: ['You no longer need to wear a helmet to benefit from perks that require "wearing all Light Armor". If you are not wearing a helmet, Light Armor pieces have 20% increased armor rating.'],
+          req: [40],
+          pos: [24, -92],
+          deps: [11],
+		}, {
+          name: 'As a Leaf',
+          desc: ['While sprinting in Light Armor, you cannot be staggered and take 50% less damage from power attacks.'],
+          req: [30],
+          pos: [18, -42],
+          deps: [0],
         }
       ]
     }, {
@@ -2872,68 +3021,190 @@
       cname: 'sneak',
       perks: [
         {
-          name: 'Stealth',
-          levels: 5,
-          desc: ['You are 20% harder to detect when sneaking.', 'You are 25% harder to detect when sneaking.', 'You are 30% harder to detect when sneaking.', 'You are 35% harder to detect when sneaking.', 'You are 40% harder to detect when sneaking.'],
-          req: [0, 20, 40, 60, 80],
+          name: 'Sneak Mastery',
+          levels: 2,
+          desc: ['Sneaking is 15% more effective. Sneak success depends on visibility (movement and light level), sound (movement and armor weight), skill level and distance.', 'Sneaking is 30% more effective. Sneak success depends on visibility (movement and light level), sound (movement and armor weight), skill level and distance.'],
+          req: [0, 20],
           pos: [0, 0],
-          id: ['000BE126', '000C07C6', '000C07C7', '000C07C8', '000C07C9']
         }, {
-          name: 'Backstab',
-          desc: ['Sneak attacks with one-handed weapons now do six times damage.'],
+          name: 'Spot Detection',
+          desc: ['Grants the "Spot Detection" power. At will, outlines all humanoids within 150 feet that are detecting you with a green glow. Lasts 30 seconds.'],
           req: [30],
-          pos: [43, -55],
+          pos: [-44, -8],
           deps: [0],
-          id: ['00058210']
-        }, {
-          name: 'Deadly Aim',
-          desc: ['Sneak attacks with bows now do three times damage.'],
-          req: [40],
-          pos: [48, -112],
-          deps: [1],
-          id: ['001036F0']
-        }, {
-          name: "Assassin's Blade",
-          desc: ['Sneak attacks with daggers now do a total of fifteen times normal damage.'],
-          req: [50],
-          pos: [27, -121],
-          deps: [2],
-          id: ['00058211']
-        }, {
-          name: 'Muffled Movement',
-          desc: ['Noise from armor is reduced 50%.'],
-          req: [30],
-          pos: [-54, -56],
-          deps: [0],
-          id: ['00058213']
-        }, {
+		}, {
           name: 'Light Foot',
-          desc: ["You won't trigger pressure plates."],
-          req: [40],
-          pos: [-32, -113],
-          deps: [4],
-          id: ['0005820C']
-        }, {
-          name: 'Silent Roll',
-          desc: ['Sprinting while sneaking executes a silent forward roll.'],
+          desc: ['You won\'t trigger pressure plates.'],
           req: [50],
-          pos: [-9, -134],
+          pos: [-88, -74],
+          deps: [1],
+		}, {
+          name: 'Tripwire',
+          desc: ['Grants the "Tripwire" power. At will, places a tripwire in front of you for 120 seconds. It snaps when tripped, knocking all targets hit by it to the floor.'],
+          req: [20],
+          pos: [-52, -33],
+          deps: [0],
+		}, {
+          name: 'Whiplash',
+          desc: ['Tripwire also reduces armor rating by 1000 points for 5 seconds.'],
+          req: [40],
+          pos: [-47, -67],
+          deps: [3],
+		}, {
+          name: 'Silent Roll',
+		  levels: 2,
+          desc: ['Sprinting while sneaking executes a silent forward roll.', 'Sprinting while sneaking executes a silent forward roll for 15 Stamina. You are 100% harder to detect while rolling.'],
+          req: [30, 60],
+          pos: [-27, -43],
+          deps: [0],
+		}, {
+          name: 'Dynamic Entry',
+          desc: ['Performing a silent roll increases your weapon damage by 40% and unarmed damage by 40 points for 3 seconds.'],
+          req: [40],
+          pos: [-15, -76],
           deps: [5],
-          id: ['00105F23']
-        }, {
-          name: 'Silence',
-          desc: ['Walking and running does not affect detection.'],
-          req: [70],
-          pos: [21, -162],
+		}, {
+          name: 'Dodge Roll',
+          desc: ['Performing a silent roll makes you ethereal for 1 second, causing all incoming attacks and spells to miss.'],
+          req: [60],
+          pos: [-32, -110],
           deps: [6],
-          id: ['00105F24']
-        }, {
-          name: 'Shadow Warrior',
-          desc: ['Crouching stops combat for a moment and forces distant opponents to search for a target.'],
-          req: [100],
-          pos: [68, -176],
+		}, {
+          name: 'Backup Plan',
+          desc: ['After being out of combat for at least 5 seconds, entering combat will place a Tripwire behind you for 60 seconds. This does not count against the limit of one Tripwire at a time.'],
+          req: [70],
+          pos: [-72, -131],
+          deps: [4, 7],
+		}, {
+          name: 'Greased Lightning',
+          desc: ['A hidden bottle enables you to leave a trail of grease whenever you perform a silent roll in combat. The grease lasts for 10 seconds and staggers running enemies, while sprinting enemies slip and fall to the ground.'],
+          req: [90],
+          pos: [-52, -169],
           deps: [7],
-          id: ['00058214']
+		}, {
+          name: 'Fog of War',
+          desc: ['Sneaking is 15% more effective against targets that are in combat with you, or 30% if they are in combat with someone else.'],
+          req: [30],
+          pos: [-1, -38],
+          deps: [0],
+		}, {
+          name: 'Silent Movement',
+		  levels: 2,
+          desc: ['Movement noise is reduced by 50%.', 'Movement noise is reduced by 100%.'],
+          req: [30, 60],
+          pos: [27, -51],
+          deps: [0],
+		}, {
+          name: 'Cloak of Shadows',
+          desc: ['You have a chance to take no damage from incoming attacks. This chance increases with your sneak skill (max 10%).'],
+          req: [55],
+          pos: [38, -73],
+          deps: [11],
+		}, {
+          name: 'Right Behind You',
+          desc: ['You are adept at hiding in your target\'s blind spot. Sneaking is 15% more effective within 30 feet and 30% more effective within 15 feet.'],
+          req: [50],
+          pos: [18, -84],
+          deps: [10, 11],
+		}, {
+          name: 'Disengage',
+          desc: ['Grants the "Disengage" power. Once a day, all enemies within 100 feet who are attacking you or searching for you instantly stop and resume their normal activities.'],
+          req: [60],
+          pos: [-6, -102],
+          deps: [13],
+		}, {
+          name: 'Behind Enemy Lines',
+          desc: ['Sneaking is 15% more effective for each enemy within 100 feet that is not detecting you.'],
+          req: [80],
+          pos: [-2, -154],
+          deps: [7, 13],
+		}, {
+          name: 'Shadow Warrior',
+          desc: ['Entering sneak mode (5 second cooldown) or performing a silent roll in combat briefly makes you invisible, forcing opponents to search for you.'],
+          req: [90],
+          pos: [3, -190],
+          deps: [15],
+		}, {
+          name: 'Smokescreen',
+          desc: ['Grants the "Smokescreen" power. Once a day, creates a 35 foot cloud for 180 seconds that blinds those in the cloud, preventing them from seeing sneaking targets. Sneak attacks against them deal 50% more damage.'],
+          req: [60],
+          pos: [29, -119],
+          deps: [13],
+		}, {
+          name: 'Partystarter',
+          desc: ['When you gain invisibility, places a barrel of flammable booze at your location. When you lose invisibility, it explodes, dealing fire damage equal to 200% of your Sneak skill level and staggering targets. This effect has a 15 second cooldown.'],
+          req: [80],
+          pos: [32, -166],
+          deps: [17],
+		}, {
+          name: 'Clean Escape',
+          desc: ['When you stand still for 8 seconds while sneaking, enemies within 150 feet no longer search for you.'],
+          req: [70],
+          pos: [58, -110],
+          deps: [13],
+		}, {
+          name: 'Escape Artist',
+          desc: ['Entering sneak mode causes all opponents who are searching for you to abandon their search.'],
+          req: [100],
+          pos: [51, -148],
+          deps: [19],
+		}, {
+          name: 'Sneak Attack',
+          desc: ['Sneak attacks with one-handed weapons deal 100% more damage. Sneak attacks with any other weapon or fists deal 25% more damage.'],
+          req: [20],
+          pos: [53, -38],
+          deps: [0],
+		}, {
+          name: 'Problem Solver',
+          desc: ['Sneak attacks deal 10% more damage for each 200 points of Health the target has, up to 50% more damage.'],
+          req: [80],
+          pos: [68, -127],
+          deps: [21],
+		}, {
+          name: 'Laughing Ghost',
+          desc: ['Grants the "Laughing Ghost" power. At will, while sneaking, teleport through the shadows behind a target to attempt a sneak power attack with your right weapon that deals double sneak attack damage. The target must be out of combat.'],
+          req: [100],
+          pos: [92, -186],
+          deps: [22],
+		}, {
+          name: 'Cloak and Dagger',
+          desc: ['Breaking invisibility with a power attack is a guaranteed critical strike that deals 50% more critical damage.'],
+          req: [90],
+          pos: [96, -154],
+          deps: [22],
+		}, {
+          name: 'Assassin\'s Blade',
+          desc: ['Sneak attacks with daggers deal 1% more damage per level of Sneak.'],
+          req: [40],
+          pos: [90, -69],
+          deps: [21],
+		}, {
+          name: 'Backstab',
+		  levels: 2,
+          desc: ['You deal 25% more damage and critical damage with daggers when striking a target from behind.', 'You deal 50% more damage and critical damage with daggers when striking a target from behind.'],
+          req: [50, 80],
+          pos: [81, -95],
+          deps: [25],
+		}, {
+          name: 'Heart Seeker',
+          desc: ['Sneak attacks have a 10% chance to deal lethal damage.'],
+          req: [70],
+          pos: [97, -100],
+          deps: [25],
+		}, {
+          name: 'Assassin\'s Reflexes',
+          desc: ['Grants the Assassin\'s Reflexes lesser power, which slows time in exchange for stamina.'],
+          req: [85],
+          pos: [79, -115],
+          deps: [27],
+		}, {
+          name: 'Demolition Job',
+          desc: ['All Destruction spells and scrolls are 1% more powerful per level of Sneak if the target is not detecting the caster (2% for rune spells).'],
+          req: [30],
+          pos: [48, -11],
+          deps: [0],
+		
+        
         }
       ]
     }, {
