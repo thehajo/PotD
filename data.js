@@ -2018,7 +2018,7 @@
           desc: ['Equipped staves regenerate 5 points of charge per second, up to their charge level when you last equipped them or recharged them with a soul gem.'],
           req: [60],
           pos: [-20, -93],
-          deps: [5],
+          deps: [2, 5],
 		}, {
           name: 'Charge Tap',
           desc: ['Grants the "Charge Tap" power. At will, drains a quarter of your current weapon charge to restore Health by 15% of the amount drained and Magicka and Stamina by 25% of the amount drained. (If you have two enchanted weapons equipped, the drain is split.)'],
