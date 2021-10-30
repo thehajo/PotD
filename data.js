@@ -490,7 +490,7 @@
 		}, {
           name: 'Psionic',
           desc: ['Choose an illusion magic mastery: Magnetic Presence, Aura of Doom, or Veil of Whispers.'],
-          req: [1000],
+          req: [100],
           pos: [78, -150],
           deps: [50, 51, 52],
 		}, {
