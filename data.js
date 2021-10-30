@@ -3540,7 +3540,7 @@
           name: 'Pummel',
 		  levels: 2,
           desc: ['Unarmed power attacks deal 25% more damage and cost 25% less Stamina.', 'Unarmed power attacks have a chance to knock down enemies when they fall below half Health, while wearing heavy gauntlets. '],
-          req: [60],
+          req: [60, 75],
           pos: [-77, -48],
           deps: [3],
 		}, {
